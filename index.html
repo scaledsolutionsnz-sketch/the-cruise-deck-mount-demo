@@ -182,6 +182,7 @@
   .card p.blurb{font-size:.9rem; color:var(--ink-2); margin:0; flex:1}
   .tags{display:flex; flex-wrap:wrap; gap:.35rem; margin:0; padding:0; list-style:none}
   .tag{font-size:.72rem; font-weight:700; letter-spacing:.03em; padding:.16rem .5rem; border-radius:6px; background:var(--gold-tint); color:var(--gold); border:1px solid #EBDCBC}
+  .tag.check{background:#fdf3e0;color:#8a5a12;border-color:#e8cf9a}
   .tag.dog{background:var(--sea-tint); color:var(--sea-deep); border-color:#CBE2E0}
   .card-foot{display:flex; align-items:center; gap:.6rem; flex-wrap:wrap; border-top:1px solid var(--line); padding-top:.7rem; margin-top:.2rem}
   .pill{
@@ -899,44 +900,47 @@
   // Placeholder trading hours for the concept. "H:MM-H:MM" in 24h, index 0 = Sunday.
   var T = [
     { id:"blur", shop:"1a", name:"Blur Eyecare Mt Maunganui", cat:"services", catLabel:"Services",
-      blurb:"Independent optometrist and eyewear, in the arcade since 2015.",
-      hours:[null,"9:00-17:00","9:00-17:00","9:00-17:00","9:00-17:00","9:00-17:00","9:00-13:00"] },
+      blurb:"Independent optometry and eyewear, open here since August 2015, owned by optometrists Stuart Laing and Haidee Mannix. The fit-out was built as an indoor forest, with a weathered steel consulting room and rimu boxes hung from a sculpted trunk.",
+      hours:[null,"9:00-17:00","9:00-17:00","9:00-17:00","9:00-17:00","9:00-17:00","10:00-16:00"] },
     { id:"longboards", shop:"1A", name:"Mount Longboards", cat:"shopping", catLabel:"Shopping",
-      blurb:"New Zealand surf apparel brand, retail store.",
-      hours:["10:00-16:00","9:00-17:00","9:00-17:00","9:00-17:00","9:00-17:00","9:00-17:00","9:00-17:00"] },
+      blurb:"Independent New Zealand surf apparel brand with its own store. Tees, swimwear, wetsuits and knitwear, vintage inspired and cut to last. Their line: inspired by the slower pace of longboarding and the simple pleasures of coastal life.",
+      hours:["10:00-15:00","10:00-16:00","10:00-16:00","10:00-16:00","10:00-16:00","10:00-16:00","10:00-16:00"] },
+    { id:"lemonade", shop:"2", name:"Lemonade Fashions", cat:"shopping", catLabel:"Shopping", check:true,
+      blurb:"Womenswear, jewellery and accessories, seventeen years in the arcade. The business was sold recently as a going concern, so the current trading name and hours need confirming with the landlord.",
+      hours:[null,"9:30-16:30","9:30-16:30","9:30-16:30","9:30-16:30","9:30-16:30","9:30-15:00"] },
     { id:"amplify", shop:"2A", name:"Amplify Her", cat:"beauty", catLabel:"Beauty",
-      blurb:"Brow and beauty studio.",
-      hours:[null,null,"9:00-17:00","9:00-17:00","9:00-19:00","9:00-17:00","9:00-15:00"] },
+      blurb:"Brow and beauty studio, previously trading as Authentic Beauty. Around sixty services across brows, lashes, lash lifts, waxing, spray tans and nails. Rated 5.0 from 958 reviews.",
+      hours:[null,"11:00-19:00","10:00-17:00","11:00-19:00","10:00-16:00","10:00-16:30","10:00-14:00"] },
+    { id:"groovy", shop:"3", name:"Groovy Eatery", cat:"food", catLabel:"Food & drink", check:true,
+      blurb:"Daytime eatery doing breakfast, lunch and coffee with a surf fit-out and sun decks. Trading status needs confirming: the business changed hands, and no current hours are published anywhere.",
+      hours:[null,null,null,null,null,null,null] },
     { id:"agave", shop:"4", name:"Agave Bistro & Drinkery", cat:"food", catLabel:"Food & drink",
-      blurb:"Bistro and bar. Paella, pasta nights and cocktails. Licensed.",
-      hours:["16:00-22:00",null,"16:00-23:00","16:00-23:00","16:00-23:00","16:00-23:00","16:00-23:00"] },
+      blurb:"Mexican bistro and cocktail bar with a long tequila and mezcal list. Ceviche de Acapulco, Carne Asada for two, market fish, and tortillas rolled to order. Taco Tuesday, jam nights on Thursday, DJs on Saturday. Vegan options across most dishes.",
+      hours:[null,null,"12:00-22:00","12:00-22:00","12:00-23:30","12:00-23:30","12:00-23:30"] },
     { id:"electric", shop:"5b", name:"Electric Soul Tattoo & Gallery", cat:"services", catLabel:"Services",
-      blurb:"Tattoo studio and art gallery.",
-      hours:[null,null,"10:00-18:00","10:00-18:00","10:00-18:00","10:00-18:00","10:00-16:00"] },
-    { id:"onyx", shop:"6A", name:"Onyx Laundromat", cat:"services", catLabel:"Services",
-      blurb:"Self service and commercial laundry.",
-      hours:["8:00-22:00","8:00-22:00","8:00-22:00","8:00-22:00","8:00-22:00","8:00-22:00","8:00-22:00"] },
-    { id:"barn", shop:"7", name:"THE BARN Burger & Grill", cat:"food", catLabel:"Food & drink", dog:true,
-      blurb:"Burgers and grill. Pet friendly, live music and sport on.",
-      hours:["11:00-21:00","11:00-21:00","11:00-21:00","11:00-21:00","11:00-22:00","11:00-23:00","11:00-23:00"] },
+      blurb:"Tattoo studio and gallery with two resident artists, Kirky Maree Donnelly and Lou Hill. Black and grey, traditional, Japanese and non traditional work. Artwork is shown on the day of the appointment rather than in advance.",
+      hours:[null,"10:00-16:00","10:00-16:00","10:00-16:00","10:00-16:00","10:00-16:00","10:00-15:00"] },
+    { id:"onyx", shop:"6a", name:"Onyx Laundromat", cat:"services", catLabel:"Services",
+      blurb:"Self service laundromat and commercial laundry, with a drop off service from 8am to 1pm. Also serves hotels, restaurants and healthcare across the Bay. Their own opening line: now you can tell those cruise passengers we have a laundry right here on The Cruise Deck.",
+      hours:["10:00-14:00","9:30-14:00","9:30-14:00","9:30-14:00","9:30-14:00","9:30-14:00","10:00-14:00"] },
+    { id:"barn", shop:"7 and 8", name:"THE BARN Burger & Grill", cat:"food", catLabel:"Food & drink", dog:true,
+      blurb:"Burgers and grill across two tenancies. Gourmet beef, chicken and vegetarian burgers, scotch fillet and BBQ ribs, with gluten free buns and a naked option. Pet friendly, live music, and Sky Sport on the big screens. 4.5 from 595 Google reviews.",
+      hours:["11:00-21:00","11:00-18:00","11:00-21:00","11:00-21:00","11:00-21:00","11:00-21:00","11:00-21:00"] },
     { id:"myrrh", shop:"9", name:"Myrrh & Co Florist", cat:"shopping", catLabel:"Shopping",
-      blurb:"Florist.",
-      hours:[null,"9:00-17:00","9:00-17:00","9:00-17:00","9:00-17:00","9:00-17:00","9:00-14:00"] },
+      blurb:"Florist and giftware, owner operated by Carolyn Kane. Fresh market flowers, funeral and corporate work, weddings by consultation, and weekly or monthly subscriptions. Delivery across Mount Maunganui, Papamoa and Tauranga.",
+      hours:["10:00-15:00","9:30-16:30","9:30-16:30","9:30-16:30","9:30-16:30","9:30-16:30","9:30-16:00"] },
     { id:"sabal", shop:"10", name:"Sabal", cat:"food", catLabel:"Food & drink", gf:true, dog:true,
-      blurb:"100% gluten free salad and poke bowls. Licensed, with a dog friendly deck. The owner is coeliac.",
-      hours:["9:00-15:00","8:00-15:30","8:00-15:30","8:00-15:30","8:00-15:30","8:00-15:30","8:00-15:30"] },
-    { id:"hot", shop:null, name:"House of Travel Mount Maunganui", cat:"services", catLabel:"Services",
-      blurb:"Travel agency.",
-      hours:[null,"9:00-17:00","9:00-17:00","9:00-17:00","9:00-17:00","9:00-17:00","10:00-14:00"] },
+      blurb:"Salad and poke bowls, one hundred percent gluten free including a dedicated fryer. Six bowls at $25, plus karaage and Korean fried chicken. Licensed, with a covered deck, beanbags and hammock chairs. 4.9 from 101 Google reviews.",
+      hours:["11:00-15:00","11:00-16:00","11:00-16:00","11:00-16:00","11:00-16:00","11:00-16:00","11:00-15:00"] },
+    { id:"hot", shop:"11", name:"House of Travel Mount Maunganui", cat:"services", catLabel:"Services",
+      blurb:"Full service travel agency, locally owned and operated by Tanya Aitken. The team are CLIA accredited cruise specialists, which is a useful thing to have in an arcade called The Cruise Deck. Flights, tailored holidays and Travelex foreign exchange. 4.9 from 161 Google reviews.",
+      hours:[null,"9:00-17:00","9:00-17:00","9:00-17:00","9:00-17:00","9:00-17:00","9:00-13:00"] },
     { id:"arte", shop:null, name:"Arte Haus Gallery", cat:"shopping", catLabel:"Shopping",
-      blurb:"Art gallery.",
-      hours:["10:00-16:00",null,null,"10:00-16:00","10:00-16:00","10:00-16:00","10:00-16:00"] },
+      blurb:"Contemporary gallery selling work by more than thirty New Zealand artists. Paintings, photography, ceramics, cast and blown glass, copper and wall sculpture, roughly $350 to $3,800. Their line: art for the heart and soul. Hours shown are their winter set.",
+      hours:[null,"10:00-16:00","10:00-16:00","10:00-16:00","10:00-16:00","10:00-16:00","9:00-15:00"] },
     { id:"enjay", shop:null, name:"En Jay Hair", cat:"beauty", catLabel:"Beauty",
-      blurb:"Hair salon.",
-      hours:[null,null,"9:00-17:00","9:00-17:00","9:00-19:00","9:00-17:00","9:00-14:00"] },
-    { id:"groovy", shop:null, name:"Groovy Eatery", cat:"food", catLabel:"Food & drink",
-      blurb:"Daytime eatery. Breakfast, lunch and coffee, with a surf theme.",
-      hours:["8:00-15:00","8:00-15:00","8:00-15:00","8:00-15:00","8:00-15:00","8:00-15:00","8:00-15:00"] }
+      blurb:"Hair salon, owner Nicky Robertson. A Redken Fifth Avenue salon using Redken colour, with senior stylists carrying seven years or more. Cutting, colour, balayage, bridal and occasion styling, plus a quick service Hair Xpress line.",
+      hours:[null,null,"9:00-17:30","9:00-17:30","9:00-20:00","9:00-16:45","9:00-16:00"] }
   ];
 
   var DAYS = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
@@ -981,6 +985,7 @@
     var tags = "";
     if(t.gf)  tags += '<li class="tag">Gluten free</li>';
     if(t.dog) tags += '<li class="tag dog">Dog friendly</li>';
+    if(t.check) tags += '<li class="tag check">Confirm with landlord</li>';
     html +=
       '<article class="card" data-id="' + t.id + '" data-cat="' + t.cat + '" data-open="' + (st.open ? "1" : "0") + '"' +
         (t.gf ? ' data-gf="1"' : '') + (t.dog ? ' data-dog="1"' : '') + '>' +
