@@ -389,7 +389,7 @@
     <div>
       <p class="eyebrow">169 Maunganui Road, Mount Maunganui</p>
       <h1>The Mount's <em>hidden</em> arcade.</h1>
-      <p class="lede">Thirteen independent businesses, a covered courtyard and a laneway you have walked past. The Cruise Deck is set back off the footpath of Maunganui Road, so almost nobody finds it by accident. This is the map that fixes that.</p>
+      <p class="lede">Thirteen independent businesses, a covered courtyard, two entrances and a laneway you have walked past. The Cruise Deck is set back off the footpath of Maunganui Road, so almost nobody finds it by accident. This is the map that fixes that.</p>
       <p class="addr">
         <strong>Open roughly 8am to 11pm daily</strong>
         <span aria-hidden="true">&middot;</span>
@@ -478,9 +478,9 @@
 
     <div class="map-shell">
       <div class="map-scroll">
-        <svg viewBox="0 0 1000 830" aria-labelledby="maptitle mapdesc">
+        <svg viewBox="0 0 1000 906" aria-labelledby="maptitle mapdesc">
           <title id="maptitle">Indicative plan of The Cruise Deck arcade</title>
-          <desc id="mapdesc">A schematic plan showing the arcade set back from Maunganui Road behind street frontage buildings, with tenancies down the left and right sides, four tenancies across the rear, and a covered courtyard in the middle.</desc>
+          <desc id="mapdesc">A schematic plan showing the arcade set back from Maunganui Road behind street frontage buildings, with a second rear entrance from Shadelands Lane, tenancies down the left and right sides, four tenancies across the rear, and a covered courtyard in the middle.</desc>
           <defs>
             <pattern id="hatch" width="9" height="9" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
               <rect width="9" height="9" fill="#E6E0D5"/>
@@ -491,166 +491,182 @@
             </marker>
           </defs>
 
+          <!-- Shadelands Lane, the rear service lane of the 169 block. The
+               arcade has TWO frontages, which is why old addresses for former
+               tenants read as Shadelands Lane. It is the back door. -->
+          <rect x="0" y="0" width="1000" height="44" fill="#DFD7C8"/>
+          <line x1="0" y1="22" x2="1000" y2="22" stroke="#F6F1E8" stroke-width="3" stroke-dasharray="26 20"/>
+          <text class="svg-label street" x="500" y="27" text-anchor="middle">SHADELANDS LANE</text>
+          <rect x="0" y="44" width="1000" height="20" fill="#EFE9DF"/>
+          <text class="svg-label" x="20" y="58" style="font-size:11px">REAR ACCESS</text>
+
+          <!-- rear entry -->
+          <rect x="430" y="64" width="140" height="62" fill="#F6F1E8" stroke="#E0D6C6"/>
+          <line x1="430" y1="64" x2="430" y2="126" stroke="#B9AB94" stroke-width="2"/>
+          <line x1="570" y1="64" x2="570" y2="126" stroke="#B9AB94" stroke-width="2"/>
+          <path d="M500 76 L500 118" stroke="#0B6C74" stroke-width="2.5" stroke-dasharray="7 6" marker-end="url(#arrow)"/>
+          <text class="svg-label" x="590" y="92" style="font-size:13px;font-weight:700;fill:#0B6C74">Rear entry</text>
+          <text class="svg-label" x="590" y="110" style="font-size:11.5px">From Shadelands Lane</text>
+
           <!-- arcade floor -->
-          <rect x="46" y="50" width="908" height="604" rx="12" fill="#F6F1E8" stroke="#E0D6C6"/>
-          <text class="svg-label big" x="500" y="38" text-anchor="middle">REAR OF SITE</text>
+          <rect x="46" y="126" width="908" height="604" rx="12" fill="#F6F1E8" stroke="#E0D6C6"/>
 
           <!-- courtyard -->
-          <rect x="285" y="190" width="430" height="450" rx="10" fill="#EADFCB" stroke="#CFC2AD" stroke-dasharray="6 5"/>
-          <text class="svg-label" x="500" y="232" text-anchor="middle" style="font-size:14px;font-weight:700;fill:#33484E">Covered outdoor courtyard</text>
-          <text class="svg-label" x="500" y="254" text-anchor="middle">Bean bags, seating, shared tables</text>
+          <rect x="285" y="266" width="430" height="450" rx="10" fill="#EADFCB" stroke="#CFC2AD" stroke-dasharray="6 5"/>
+          <text class="svg-label" x="500" y="308" text-anchor="middle" style="font-size:14px;font-weight:700;fill:#33484E">Covered outdoor courtyard</text>
+          <text class="svg-label" x="500" y="330" text-anchor="middle">Bean bags, seating, shared tables</text>
           <g fill="#DCCDB2" stroke="#C6B79A" stroke-width="1.2">
-            <ellipse cx="360" cy="330" rx="30" ry="22"/>
-            <ellipse cx="440" cy="372" rx="30" ry="22"/>
-            <ellipse cx="560" cy="330" rx="30" ry="22"/>
-            <ellipse cx="640" cy="372" rx="30" ry="22"/>
-            <ellipse cx="400" cy="470" rx="30" ry="22"/>
-            <ellipse cx="600" cy="470" rx="30" ry="22"/>
-            <rect x="470" y="430" width="60" height="60" rx="8"/>
-            <circle cx="330" cy="560" r="20"/>
-            <circle cx="670" cy="560" r="20"/>
+            <ellipse cx="360" cy="406" rx="30" ry="22"/>
+            <ellipse cx="440" cy="448" rx="30" ry="22"/>
+            <ellipse cx="560" cy="406" rx="30" ry="22"/>
+            <ellipse cx="640" cy="448" rx="30" ry="22"/>
+            <ellipse cx="400" cy="546" rx="30" ry="22"/>
+            <ellipse cx="600" cy="546" rx="30" ry="22"/>
+            <rect x="470" y="506" width="60" height="60" rx="8"/>
+            <circle cx="330" cy="636" r="20"/>
+            <circle cx="670" cy="636" r="20"/>
           </g>
-          <text class="svg-label" x="500" y="600" text-anchor="middle" style="font-size:11px">Planting and seating indicative</text>
+          <text class="svg-label" x="500" y="676" text-anchor="middle" style="font-size:11px">Planting and seating indicative</text>
 
           <!-- rear row -->
           <g class="u" data-id="hot" tabindex="0" role="button" aria-label="House of Travel Mount Maunganui, rear of arcade">
-            <rect class="box" x="60" y="70" width="214" height="105" rx="8"/>
-            <rect x="72" y="82" width="46" height="21" rx="6" fill="#F3EADB" stroke="#DDD0B8"/>
-            <text class="u-no" x="95" y="97" text-anchor="middle" style="font-size:10.5px;letter-spacing:.5px">TBC</text>
-            <text class="u-cat" x="262" y="97" text-anchor="end">SERVICES</text>
-            <text class="u-name" x="72" y="128">House of Travel</text>
-            <text class="u-name" x="72" y="146">Mount Maunganui</text>
+            <rect class="box" x="60" y="146" width="214" height="105" rx="8"/>
+            <rect x="72" y="158" width="46" height="21" rx="6" fill="#F3EADB" stroke="#DDD0B8"/>
+            <text class="u-no" x="95" y="173" text-anchor="middle" style="font-size:10.5px;letter-spacing:.5px">TBC</text>
+            <text class="u-cat" x="262" y="173" text-anchor="end">SERVICES</text>
+            <text class="u-name" x="72" y="204">House of Travel</text>
+            <text class="u-name" x="72" y="222">Mount Maunganui</text>
           </g>
           <g class="u" data-id="arte" tabindex="0" role="button" aria-label="Arte Haus Gallery, rear of arcade">
-            <rect class="box" x="282" y="70" width="214" height="105" rx="8"/>
-            <rect x="294" y="82" width="46" height="21" rx="6" fill="#F3EADB" stroke="#DDD0B8"/>
-            <text class="u-no" x="317" y="97" text-anchor="middle" style="font-size:10.5px;letter-spacing:.5px">TBC</text>
-            <text class="u-cat" x="484" y="97" text-anchor="end">SHOPPING</text>
-            <text class="u-name" x="294" y="128">Arte Haus</text>
-            <text class="u-name" x="294" y="146">Gallery</text>
+            <rect class="box" x="282" y="146" width="214" height="105" rx="8"/>
+            <rect x="294" y="158" width="46" height="21" rx="6" fill="#F3EADB" stroke="#DDD0B8"/>
+            <text class="u-no" x="317" y="173" text-anchor="middle" style="font-size:10.5px;letter-spacing:.5px">TBC</text>
+            <text class="u-cat" x="484" y="173" text-anchor="end">SHOPPING</text>
+            <text class="u-name" x="294" y="204">Arte Haus</text>
+            <text class="u-name" x="294" y="222">Gallery</text>
           </g>
           <g class="u" data-id="enjay" tabindex="0" role="button" aria-label="En Jay Hair, rear of arcade">
-            <rect class="box" x="504" y="70" width="214" height="105" rx="8"/>
-            <rect x="516" y="82" width="46" height="21" rx="6" fill="#F3EADB" stroke="#DDD0B8"/>
-            <text class="u-no" x="539" y="97" text-anchor="middle" style="font-size:10.5px;letter-spacing:.5px">TBC</text>
-            <text class="u-cat" x="706" y="97" text-anchor="end">BEAUTY</text>
-            <text class="u-name" x="516" y="128">En Jay Hair</text>
+            <rect class="box" x="504" y="146" width="214" height="105" rx="8"/>
+            <rect x="516" y="158" width="46" height="21" rx="6" fill="#F3EADB" stroke="#DDD0B8"/>
+            <text class="u-no" x="539" y="173" text-anchor="middle" style="font-size:10.5px;letter-spacing:.5px">TBC</text>
+            <text class="u-cat" x="706" y="173" text-anchor="end">BEAUTY</text>
+            <text class="u-name" x="516" y="204">En Jay Hair</text>
           </g>
           <g class="u" data-id="groovy" tabindex="0" role="button" aria-label="Groovy Eatery, rear of arcade">
-            <rect class="box" x="726" y="70" width="214" height="105" rx="8"/>
-            <rect x="738" y="82" width="46" height="21" rx="6" fill="#F3EADB" stroke="#DDD0B8"/>
-            <text class="u-no" x="761" y="97" text-anchor="middle" style="font-size:10.5px;letter-spacing:.5px">TBC</text>
-            <text class="u-cat" x="928" y="97" text-anchor="end">FOOD</text>
-            <text class="u-name" x="738" y="128">Groovy Eatery</text>
+            <rect class="box" x="726" y="146" width="214" height="105" rx="8"/>
+            <rect x="738" y="158" width="46" height="21" rx="6" fill="#F3EADB" stroke="#DDD0B8"/>
+            <text class="u-no" x="761" y="173" text-anchor="middle" style="font-size:10.5px;letter-spacing:.5px">TBC</text>
+            <text class="u-cat" x="928" y="173" text-anchor="end">FOOD</text>
+            <text class="u-name" x="738" y="204">Groovy Eatery</text>
           </g>
 
           <!-- left column, back to front -->
           <g class="u" data-id="agave" tabindex="0" role="button" aria-label="Shop 4, Agave Bistro and Drinkery">
-            <rect class="box" x="60" y="190" width="210" height="86" rx="8"/>
-            <rect x="72" y="202" width="40" height="21" rx="6" fill="#F3EADB" stroke="#DDD0B8"/>
-            <text class="u-no" x="92" y="217" text-anchor="middle">4</text>
-            <text class="u-cat" x="258" y="217" text-anchor="end">FOOD</text>
-            <text class="u-name" x="72" y="243">Agave Bistro</text>
-            <text class="u-name" x="72" y="261">&amp; Drinkery</text>
+            <rect class="box" x="60" y="266" width="210" height="86" rx="8"/>
+            <rect x="72" y="278" width="40" height="21" rx="6" fill="#F3EADB" stroke="#DDD0B8"/>
+            <text class="u-no" x="92" y="293" text-anchor="middle">4</text>
+            <text class="u-cat" x="258" y="293" text-anchor="end">FOOD</text>
+            <text class="u-name" x="72" y="319">Agave Bistro</text>
+            <text class="u-name" x="72" y="337">&amp; Drinkery</text>
           </g>
           <g class="u vac" data-id="vacant" tabindex="0" role="button" aria-label="Shop 2B, space available for lease">
-            <rect class="box" x="60" y="281" width="210" height="86" rx="8"/>
-            <rect x="72" y="293" width="40" height="21" rx="6" fill="#fff" stroke="#A8791E"/>
-            <text class="u-no" x="92" y="308" text-anchor="middle" style="fill:#A8791E">2B</text>
-            <text class="u-cat" x="258" y="308" text-anchor="end" style="fill:#A8791E">VACANT</text>
-            <text class="u-name" x="72" y="334" style="fill:#A8791E;font-weight:700">Space available</text>
-            <text class="u-name" x="72" y="352" style="fill:#8A7C66;font-size:11.5px">$23,900 + GST + OPEX</text>
+            <rect class="box" x="60" y="357" width="210" height="86" rx="8"/>
+            <rect x="72" y="369" width="40" height="21" rx="6" fill="#fff" stroke="#A8791E"/>
+            <text class="u-no" x="92" y="384" text-anchor="middle" style="fill:#A8791E">2B</text>
+            <text class="u-cat" x="258" y="384" text-anchor="end" style="fill:#A8791E">VACANT</text>
+            <text class="u-name" x="72" y="410" style="fill:#A8791E;font-weight:700">Space available</text>
+            <text class="u-name" x="72" y="428" style="fill:#8A7C66;font-size:11.5px">$23,900 + GST + OPEX</text>
           </g>
           <g class="u" data-id="amplify" tabindex="0" role="button" aria-label="Shop 2A, Amplify Her">
-            <rect class="box" x="60" y="372" width="210" height="86" rx="8"/>
-            <rect x="72" y="384" width="40" height="21" rx="6" fill="#F3EADB" stroke="#DDD0B8"/>
-            <text class="u-no" x="92" y="399" text-anchor="middle">2A</text>
-            <text class="u-cat" x="258" y="399" text-anchor="end">BEAUTY</text>
-            <text class="u-name" x="72" y="425">Amplify Her</text>
-            <text class="u-name" x="72" y="443" style="fill:#6C8288;font-size:11.5px">Brow and beauty studio</text>
+            <rect class="box" x="60" y="448" width="210" height="86" rx="8"/>
+            <rect x="72" y="460" width="40" height="21" rx="6" fill="#F3EADB" stroke="#DDD0B8"/>
+            <text class="u-no" x="92" y="475" text-anchor="middle">2A</text>
+            <text class="u-cat" x="258" y="475" text-anchor="end">BEAUTY</text>
+            <text class="u-name" x="72" y="501">Amplify Her</text>
+            <text class="u-name" x="72" y="519" style="fill:#6C8288;font-size:11.5px">Brow and beauty studio</text>
           </g>
           <g class="u" data-id="longboards" tabindex="0" role="button" aria-label="Shop 1A, Mount Longboards">
-            <rect class="box" x="60" y="463" width="210" height="86" rx="8"/>
-            <rect x="72" y="475" width="40" height="21" rx="6" fill="#F3EADB" stroke="#DDD0B8"/>
-            <text class="u-no" x="92" y="490" text-anchor="middle">1A</text>
-            <text class="u-cat" x="258" y="490" text-anchor="end">SHOPPING</text>
-            <text class="u-name" x="72" y="516">Mount</text>
-            <text class="u-name" x="72" y="534">Longboards</text>
+            <rect class="box" x="60" y="539" width="210" height="86" rx="8"/>
+            <rect x="72" y="551" width="40" height="21" rx="6" fill="#F3EADB" stroke="#DDD0B8"/>
+            <text class="u-no" x="92" y="566" text-anchor="middle">1A</text>
+            <text class="u-cat" x="258" y="566" text-anchor="end">SHOPPING</text>
+            <text class="u-name" x="72" y="592">Mount</text>
+            <text class="u-name" x="72" y="610">Longboards</text>
           </g>
           <g class="u" data-id="blur" tabindex="0" role="button" aria-label="Shop 1a, Blur Eyecare Mt Maunganui">
-            <rect class="box" x="60" y="554" width="210" height="86" rx="8"/>
-            <rect x="72" y="566" width="40" height="21" rx="6" fill="#F3EADB" stroke="#DDD0B8"/>
-            <text class="u-no" x="92" y="581" text-anchor="middle">1a</text>
-            <text class="u-cat" x="258" y="581" text-anchor="end">SERVICES</text>
-            <text class="u-name" x="72" y="607">Blur Eyecare</text>
-            <text class="u-name" x="72" y="625" style="fill:#6C8288;font-size:11.5px">Optometrist</text>
+            <rect class="box" x="60" y="630" width="210" height="86" rx="8"/>
+            <rect x="72" y="642" width="40" height="21" rx="6" fill="#F3EADB" stroke="#DDD0B8"/>
+            <text class="u-no" x="92" y="657" text-anchor="middle">1a</text>
+            <text class="u-cat" x="258" y="657" text-anchor="end">SERVICES</text>
+            <text class="u-name" x="72" y="683">Blur Eyecare</text>
+            <text class="u-name" x="72" y="701" style="fill:#6C8288;font-size:11.5px">Optometrist</text>
           </g>
 
           <!-- right column, back to front -->
           <g class="u" data-id="electric" tabindex="0" role="button" aria-label="Shop 5b, Electric Soul Tattoo and Gallery">
-            <rect class="box" x="730" y="190" width="210" height="86" rx="8"/>
-            <rect x="742" y="202" width="40" height="21" rx="6" fill="#F3EADB" stroke="#DDD0B8"/>
-            <text class="u-no" x="762" y="217" text-anchor="middle">5b</text>
-            <text class="u-cat" x="928" y="217" text-anchor="end">SERVICES</text>
-            <text class="u-name" x="742" y="243">Electric Soul</text>
-            <text class="u-name" x="742" y="261">Tattoo &amp; Gallery</text>
+            <rect class="box" x="730" y="266" width="210" height="86" rx="8"/>
+            <rect x="742" y="278" width="40" height="21" rx="6" fill="#F3EADB" stroke="#DDD0B8"/>
+            <text class="u-no" x="762" y="293" text-anchor="middle">5b</text>
+            <text class="u-cat" x="928" y="293" text-anchor="end">SERVICES</text>
+            <text class="u-name" x="742" y="319">Electric Soul</text>
+            <text class="u-name" x="742" y="337">Tattoo &amp; Gallery</text>
           </g>
           <g class="u" data-id="onyx" tabindex="0" role="button" aria-label="Shop 6A, Onyx Laundromat">
-            <rect class="box" x="730" y="281" width="210" height="86" rx="8"/>
-            <rect x="742" y="293" width="40" height="21" rx="6" fill="#F3EADB" stroke="#DDD0B8"/>
-            <text class="u-no" x="762" y="308" text-anchor="middle">6A</text>
-            <text class="u-cat" x="928" y="308" text-anchor="end">SERVICES</text>
-            <text class="u-name" x="742" y="334">Onyx Laundromat</text>
-            <text class="u-name" x="742" y="352" style="fill:#6C8288;font-size:11.5px">Self service &amp; commercial</text>
+            <rect class="box" x="730" y="357" width="210" height="86" rx="8"/>
+            <rect x="742" y="369" width="40" height="21" rx="6" fill="#F3EADB" stroke="#DDD0B8"/>
+            <text class="u-no" x="762" y="384" text-anchor="middle">6A</text>
+            <text class="u-cat" x="928" y="384" text-anchor="end">SERVICES</text>
+            <text class="u-name" x="742" y="410">Onyx Laundromat</text>
+            <text class="u-name" x="742" y="428" style="fill:#6C8288;font-size:11.5px">Self service &amp; commercial</text>
           </g>
           <g class="u" data-id="barn" tabindex="0" role="button" aria-label="Shop 7, THE BARN Burger and Grill">
-            <rect class="box" x="730" y="372" width="210" height="86" rx="8"/>
-            <rect x="742" y="384" width="40" height="21" rx="6" fill="#F3EADB" stroke="#DDD0B8"/>
-            <text class="u-no" x="762" y="399" text-anchor="middle">7</text>
-            <text class="u-cat" x="928" y="399" text-anchor="end">FOOD</text>
-            <text class="u-name" x="742" y="425">THE BARN</text>
-            <text class="u-name" x="742" y="443">Burger &amp; Grill</text>
+            <rect class="box" x="730" y="448" width="210" height="86" rx="8"/>
+            <rect x="742" y="460" width="40" height="21" rx="6" fill="#F3EADB" stroke="#DDD0B8"/>
+            <text class="u-no" x="762" y="475" text-anchor="middle">7</text>
+            <text class="u-cat" x="928" y="475" text-anchor="end">FOOD</text>
+            <text class="u-name" x="742" y="501">THE BARN</text>
+            <text class="u-name" x="742" y="519">Burger &amp; Grill</text>
           </g>
           <g class="u" data-id="myrrh" tabindex="0" role="button" aria-label="Shop 9, Myrrh and Co Florist">
-            <rect class="box" x="730" y="463" width="210" height="86" rx="8"/>
-            <rect x="742" y="475" width="40" height="21" rx="6" fill="#F3EADB" stroke="#DDD0B8"/>
-            <text class="u-no" x="762" y="490" text-anchor="middle">9</text>
-            <text class="u-cat" x="928" y="490" text-anchor="end">SHOPPING</text>
-            <text class="u-name" x="742" y="516">Myrrh &amp; Co</text>
-            <text class="u-name" x="742" y="534">Florist</text>
+            <rect class="box" x="730" y="539" width="210" height="86" rx="8"/>
+            <rect x="742" y="551" width="40" height="21" rx="6" fill="#F3EADB" stroke="#DDD0B8"/>
+            <text class="u-no" x="762" y="566" text-anchor="middle">9</text>
+            <text class="u-cat" x="928" y="566" text-anchor="end">SHOPPING</text>
+            <text class="u-name" x="742" y="592">Myrrh &amp; Co</text>
+            <text class="u-name" x="742" y="610">Florist</text>
           </g>
           <g class="u" data-id="sabal" tabindex="0" role="button" aria-label="Shop 10, Sabal, gluten free salad and poke bowls">
-            <rect class="box" x="730" y="554" width="210" height="86" rx="8"/>
-            <rect x="742" y="566" width="40" height="21" rx="6" fill="#F3EADB" stroke="#DDD0B8"/>
-            <text class="u-no" x="762" y="581" text-anchor="middle">10</text>
-            <text class="u-cat" x="928" y="581" text-anchor="end">FOOD</text>
-            <text class="u-name" x="742" y="607">Sabal</text>
-            <text class="u-name" x="742" y="625" style="fill:#6C8288;font-size:11.5px">100% gluten free</text>
+            <rect class="box" x="730" y="630" width="210" height="86" rx="8"/>
+            <rect x="742" y="642" width="40" height="21" rx="6" fill="#F3EADB" stroke="#DDD0B8"/>
+            <text class="u-no" x="762" y="657" text-anchor="middle">10</text>
+            <text class="u-cat" x="928" y="657" text-anchor="end">FOOD</text>
+            <text class="u-name" x="742" y="683">Sabal</text>
+            <text class="u-name" x="742" y="701" style="fill:#6C8288;font-size:11.5px">100% gluten free</text>
           </g>
 
           <!-- entry throat -->
-          <rect x="430" y="640" width="140" height="108" fill="#F6F1E8" stroke="#E0D6C6"/>
-          <line x1="430" y1="640" x2="430" y2="748" stroke="#B9AB94" stroke-width="2"/>
-          <line x1="570" y1="640" x2="570" y2="748" stroke="#B9AB94" stroke-width="2"/>
-          <path d="M500 736 L500 664" stroke="#0B6C74" stroke-width="2.5" stroke-dasharray="7 6" marker-end="url(#arrow)"/>
-          <text class="svg-label" x="590" y="700" style="font-size:13px;font-weight:700;fill:#0B6C74">Arcade entry</text>
-          <text class="svg-label" x="590" y="718" style="font-size:11.5px">Set back off the footpath</text>
+          <rect x="430" y="716" width="140" height="108" fill="#F6F1E8" stroke="#E0D6C6"/>
+          <line x1="430" y1="716" x2="430" y2="824" stroke="#B9AB94" stroke-width="2"/>
+          <line x1="570" y1="716" x2="570" y2="824" stroke="#B9AB94" stroke-width="2"/>
+          <path d="M500 812 L500 740" stroke="#0B6C74" stroke-width="2.5" stroke-dasharray="7 6" marker-end="url(#arrow)"/>
+          <text class="svg-label" x="590" y="776" style="font-size:13px;font-weight:700;fill:#0B6C74">Arcade entry</text>
+          <text class="svg-label" x="590" y="794" style="font-size:11.5px">Set back off the footpath</text>
 
           <!-- street frontage buildings -->
-          <rect x="46" y="655" width="384" height="90" rx="6" fill="url(#hatch)" stroke="#C6B79A"/>
-          <rect x="570" y="655" width="384" height="90" rx="6" fill="url(#hatch)" stroke="#C6B79A"/>
-          <text class="svg-label" x="238" y="695" text-anchor="middle" style="font-size:11.5px;fill:#7A6E5C">Street frontage buildings</text>
-          <text class="svg-label" x="238" y="712" text-anchor="middle" style="font-size:11.5px;fill:#7A6E5C">(not part of the arcade)</text>
-          <text class="svg-label" x="762" y="695" text-anchor="middle" style="font-size:11.5px;fill:#7A6E5C">Street frontage buildings</text>
-          <text class="svg-label" x="762" y="712" text-anchor="middle" style="font-size:11.5px;fill:#7A6E5C">(not part of the arcade)</text>
+          <rect x="46" y="731" width="384" height="90" rx="6" fill="url(#hatch)" stroke="#C6B79A"/>
+          <rect x="570" y="731" width="384" height="90" rx="6" fill="url(#hatch)" stroke="#C6B79A"/>
+          <text class="svg-label" x="238" y="771" text-anchor="middle" style="font-size:11.5px;fill:#7A6E5C">Street frontage buildings</text>
+          <text class="svg-label" x="238" y="788" text-anchor="middle" style="font-size:11.5px;fill:#7A6E5C">(not part of the arcade)</text>
+          <text class="svg-label" x="762" y="771" text-anchor="middle" style="font-size:11.5px;fill:#7A6E5C">Street frontage buildings</text>
+          <text class="svg-label" x="762" y="788" text-anchor="middle" style="font-size:11.5px;fill:#7A6E5C">(not part of the arcade)</text>
 
           <!-- footpath and street -->
-          <rect x="0" y="748" width="1000" height="26" fill="#EFE9DF"/>
-          <text class="svg-label" x="20" y="766" style="font-size:11px">FOOTPATH</text>
-          <rect x="0" y="774" width="1000" height="56" fill="#DFD7C8"/>
-          <line x1="0" y1="802" x2="1000" y2="802" stroke="#F6F1E8" stroke-width="3" stroke-dasharray="26 20"/>
-          <text class="svg-label street" x="500" y="807" text-anchor="middle">MAUNGANUI ROAD</text>
-          <text class="svg-label" x="980" y="766" text-anchor="end" style="font-size:11px">INDICATIVE ONLY &middot; NOT TO SCALE</text>
+          <rect x="0" y="824" width="1000" height="26" fill="#EFE9DF"/>
+          <text class="svg-label" x="20" y="842" style="font-size:11px">FOOTPATH</text>
+          <rect x="0" y="850" width="1000" height="56" fill="#DFD7C8"/>
+          <line x1="0" y1="878" x2="1000" y2="878" stroke="#F6F1E8" stroke-width="3" stroke-dasharray="26 20"/>
+          <text class="svg-label street" x="500" y="883" text-anchor="middle">MAUNGANUI ROAD</text>
+          <text class="svg-label" x="980" y="842" text-anchor="end" style="font-size:11px">INDICATIVE ONLY &middot; NOT TO SCALE</text>
         </svg>
       </div>
 
