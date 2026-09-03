@@ -1,0 +1,1125 @@
+<!doctype html>
+<html lang="en-NZ">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Cruise Deck, Mount Maunganui | Arcade directory concept</title>
+<meta name="description" content="Concept directory and map for The Cruise Deck arcade, 169 Maunganui Road, Mount Maunganui. Prepared for Guideline Investors Limited by Scaled Solutions.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FBF7F1;
+    --surface:#FFFFFF;
+    --sand:#F3EADB;
+    --sand-2:#EADFCB;
+    --line:#E0D6C6;
+    --line-2:#CFC2AD;
+    --ink:#12262B;
+    --ink-2:#33484E;
+    --muted:#6C8288;
+    --sea:#0B6C74;
+    --sea-deep:#083E44;
+    --sea-tint:#E4F0EF;
+    --coral:#C0522A;
+    --gold:#A8791E;
+    --gold-tint:#FBF1DC;
+    --open:#17724A;
+    --closed:#6E7B7E;
+    --radius:14px;
+    --shadow:0 1px 2px rgba(18,38,43,.05), 0 8px 24px -14px rgba(18,38,43,.28);
+    --maxw:1180px;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:"DM Sans",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+    font-size:16.5px; line-height:1.62; overflow-x:hidden;
+    font-optical-sizing:auto;
+  }
+  img{max-width:100%; display:block}
+  h1,h2,h3,h4{font-family:"Fraunces",Georgia,"Times New Roman",serif; font-weight:600; line-height:1.1; margin:0; letter-spacing:-.01em}
+  h1{font-size:clamp(2.3rem,6.2vw,4.1rem); font-weight:700; letter-spacing:-.025em}
+  h2{font-size:clamp(1.75rem,3.9vw,2.7rem)}
+  h3{font-size:clamp(1.15rem,2.2vw,1.4rem)}
+  p{margin:0 0 1rem}
+  a{color:var(--sea); text-underline-offset:3px}
+  .wrap{width:100%; max-width:var(--maxw); margin:0 auto; padding:0 20px}
+  .eyebrow{
+    font-size:.72rem; letter-spacing:.16em; text-transform:uppercase;
+    font-weight:700; color:var(--sea); margin:0 0 .85rem;
+    display:flex; align-items:center; gap:.6rem;
+  }
+  .eyebrow::after{content:""; height:1px; flex:1; background:var(--line); max-width:110px}
+  .lede{font-size:clamp(1.05rem,2vw,1.22rem); color:var(--ink-2); max-width:62ch}
+  section{padding:clamp(3.2rem,7vw,5.6rem) 0; position:relative}
+  .rule{height:1px; background:var(--line); border:0; margin:0}
+
+  /* ---------- top banner ---------- */
+  .banner{
+    background:var(--sea-deep); color:#DCEAE9; font-size:.78rem; letter-spacing:.02em;
+    padding:.5rem 0; position:relative; z-index:60;
+  }
+  .banner .wrap{display:flex; gap:.55rem .9rem; align-items:center; flex-wrap:wrap; justify-content:center; text-align:center}
+  .banner b{color:#fff; font-weight:500}
+  .banner .dot{width:6px;height:6px;border-radius:50%;background:#E7B450;flex:none}
+
+  /* ---------- header ---------- */
+  header.site{
+    position:sticky; top:0; z-index:50; background:rgba(251,247,241,.92);
+    backdrop-filter:saturate(1.4) blur(10px); border-bottom:1px solid var(--line);
+  }
+  header.site .wrap{display:flex; align-items:center; gap:1.2rem; min-height:64px}
+  .brand{display:flex; align-items:center; gap:.7rem; text-decoration:none; color:var(--ink); flex:none}
+  .brand .mark{width:34px;height:34px;flex:none}
+  .brand b{font-family:"Fraunces",serif; font-weight:700; font-size:1.05rem; letter-spacing:-.02em; line-height:1.05; display:block}
+  .brand span{font-size:.68rem; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); display:block}
+  nav.main{margin-left:auto; display:flex; gap:.2rem; overflow-x:auto; scrollbar-width:none}
+  nav.main::-webkit-scrollbar{display:none}
+  nav.main a{
+    font-size:.86rem; font-weight:500; color:var(--ink-2); text-decoration:none;
+    padding:.45rem .6rem; border-radius:8px; white-space:nowrap;
+  }
+  nav.main a:hover{background:var(--sand); color:var(--ink)}
+  nav.main a.cta{background:var(--sea); color:#fff}
+  nav.main a.cta:hover{background:var(--sea-deep); color:#fff}
+
+  /* ---------- hero ---------- */
+  .hero{padding-top:clamp(2.4rem,5vw,4rem); padding-bottom:0}
+  .hero-grid{display:grid; gap:clamp(1.6rem,4vw,3rem); grid-template-columns:1fr; align-items:center}
+  @media(min-width:940px){ .hero-grid{grid-template-columns:1.08fr .92fr} }
+  .hero h1{margin-bottom:1.1rem}
+  .hero h1 em{font-style:italic; font-weight:400; color:var(--sea)}
+  .hero .lede{margin-bottom:1.5rem}
+  .addr{font-size:.95rem; color:var(--ink-2); display:flex; flex-wrap:wrap; gap:.4rem .8rem; align-items:center; margin-bottom:1.4rem}
+  .addr strong{font-weight:700; color:var(--ink)}
+  .chips{display:flex; flex-wrap:wrap; gap:.5rem; padding:0; margin:0; list-style:none}
+  .chip{
+    display:inline-flex; align-items:center; gap:.42rem; background:var(--surface);
+    border:1px solid var(--line); border-radius:999px; padding:.34rem .78rem;
+    font-size:.82rem; color:var(--ink-2);
+  }
+  .chip svg{width:14px;height:14px;flex:none;color:var(--sea)}
+  .hero-figure{position:relative}
+  .hero-figure img{
+    width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:var(--radius);
+    box-shadow:var(--shadow);
+  }
+  @media(max-width:939px){ .hero-figure img{aspect-ratio:16/11} }
+  .photo-note{
+    position:absolute; left:12px; right:12px; bottom:12px;
+    background:rgba(18,38,43,.82); color:#EAF1F0; font-size:.72rem; line-height:1.35;
+    padding:.5rem .7rem; border-radius:9px; backdrop-filter:blur(4px);
+  }
+  .photo-note b{color:#F0C97A; font-weight:700}
+
+  /* ---------- insight band ---------- */
+  .band{background:var(--sea-deep); color:#E4EEED}
+  .band h2{color:#fff}
+  .band .lede{color:#C6DAD8}
+  .band-grid{display:grid; gap:clamp(1.6rem,4vw,3rem); grid-template-columns:1fr}
+  @media(min-width:900px){ .band-grid{grid-template-columns:1fr 1fr; align-items:center} }
+  .quotes{display:grid; gap:.7rem; margin:1.6rem 0 0; padding:0; list-style:none}
+  .quotes li{
+    background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.14);
+    border-left:3px solid #E7B450; border-radius:0 10px 10px 0; padding:.7rem 1rem;
+    font-family:"Fraunces",serif; font-size:1.02rem; font-style:italic; color:#fff;
+  }
+  .quotes li span{display:block; font-family:"DM Sans",sans-serif; font-style:normal; font-size:.75rem; color:#A9C4C2; letter-spacing:.04em; margin-top:.15rem}
+  .band-figure{position:relative}
+  .band-figure img{width:100%; aspect-ratio:5/4; object-fit:cover; border-radius:var(--radius)}
+  .band .callout{
+    margin-top:1.6rem; background:#fff; color:var(--ink); border-radius:var(--radius);
+    padding:1.25rem 1.35rem; box-shadow:var(--shadow);
+  }
+  .band .callout p:last-child{margin-bottom:0}
+  .band .callout strong{color:var(--sea)}
+
+  /* ---------- directory ---------- */
+  .toolbar{
+    display:flex; flex-wrap:wrap; gap:.5rem; align-items:center;
+    margin:1.9rem 0 .9rem;
+  }
+  .filters,.toggles{display:flex; flex-wrap:wrap; gap:.45rem}
+  .toggles{margin-left:0}
+  @media(min-width:820px){ .toggles{margin-left:auto} }
+  .fbtn{
+    font:inherit; font-size:.85rem; font-weight:500; cursor:pointer;
+    background:var(--surface); border:1px solid var(--line-2); color:var(--ink-2);
+    border-radius:999px; padding:.42rem .9rem; transition:.15s ease;
+    display:inline-flex; align-items:center; gap:.4rem;
+  }
+  .fbtn:hover{border-color:var(--sea); color:var(--sea)}
+  .fbtn[aria-pressed="true"]{background:var(--sea); border-color:var(--sea); color:#fff}
+  .fbtn.tog[aria-pressed="true"]{background:var(--gold); border-color:var(--gold); color:#fff}
+  .fbtn .cnt{font-size:.75rem; opacity:.7}
+  .result-line{font-size:.86rem; color:var(--muted); margin:0 0 1.2rem}
+  .result-line b{color:var(--ink); font-weight:700}
+
+  .grid{display:grid; gap:1rem; grid-template-columns:1fr}
+  @media(min-width:620px){ .grid{grid-template-columns:1fr 1fr} }
+  @media(min-width:1000px){ .grid{grid-template-columns:repeat(3,1fr)} }
+  .card{
+    background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
+    padding:1.1rem 1.15rem 1rem; display:flex; flex-direction:column; gap:.55rem;
+    box-shadow:0 1px 2px rgba(18,38,43,.04); transition:.18s ease; position:relative;
+  }
+  .card:hover{border-color:var(--line-2); box-shadow:var(--shadow); transform:translateY(-2px)}
+  .card.flash{border-color:var(--sea); box-shadow:0 0 0 3px var(--sea-tint)}
+  .card-top{display:flex; align-items:flex-start; gap:.7rem}
+  .shopno{
+    flex:none; min-width:2.35rem; height:2.35rem; padding:0 .45rem; border-radius:9px;
+    background:var(--sand); color:var(--sea-deep); border:1px solid var(--sand-2);
+    display:grid; place-items:center; font-weight:700; font-size:.92rem;
+    font-family:"Fraunces",serif; letter-spacing:-.01em;
+  }
+  .shopno.none{background:transparent; border-style:dashed; color:var(--muted); font-size:.74rem; font-family:"DM Sans",sans-serif; letter-spacing:.06em}
+  .card h3{font-size:1.09rem; line-height:1.25; margin-bottom:.1rem}
+  .cat{font-size:.72rem; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); font-weight:700}
+  .card p.blurb{font-size:.9rem; color:var(--ink-2); margin:0; flex:1}
+  .tags{display:flex; flex-wrap:wrap; gap:.35rem; margin:0; padding:0; list-style:none}
+  .tag{font-size:.72rem; font-weight:700; letter-spacing:.03em; padding:.16rem .5rem; border-radius:6px; background:var(--gold-tint); color:var(--gold); border:1px solid #EBDCBC}
+  .tag.dog{background:var(--sea-tint); color:var(--sea-deep); border-color:#CBE2E0}
+  .card-foot{display:flex; align-items:center; gap:.6rem; flex-wrap:wrap; border-top:1px solid var(--line); padding-top:.7rem; margin-top:.2rem}
+  .pill{
+    display:inline-flex; align-items:center; gap:.4rem; font-size:.8rem; font-weight:700;
+    border-radius:999px; padding:.24rem .62rem .24rem .5rem; border:1px solid transparent;
+  }
+  .pill .led{width:8px;height:8px;border-radius:50%;flex:none;background:currentColor}
+  .pill.open{color:var(--open); background:#E7F3ED; border-color:#C8E4D6}
+  .pill.closed{color:var(--closed); background:#EFF1F1; border-color:#DFE4E4}
+  .pill.call{color:var(--gold); background:#FBF1DC; border-color:#EBDCBC}
+  .hrs{font-size:.79rem; color:var(--muted)}
+  .maplink{
+    margin-left:auto; font-size:.79rem; font-weight:700; color:var(--sea); background:none;
+    border:0; padding:.2rem 0; cursor:pointer; font-family:inherit; display:inline-flex; align-items:center; gap:.28rem;
+  }
+  .maplink:hover{text-decoration:underline}
+  .card.hidden{display:none}
+
+  .card.vacant{background:linear-gradient(180deg,#FDF7EA,#FFFDF8); border:1px dashed var(--gold); border-width:1.5px}
+  .card.vacant .shopno{background:#fff; border-color:var(--gold); color:var(--gold)}
+  .card.vacant h3{color:var(--gold)}
+  .lease-price{font-family:"Fraunces",serif; font-size:1.35rem; font-weight:700; color:var(--ink); line-height:1.1}
+  .lease-price small{display:block; font-family:"DM Sans",sans-serif; font-size:.76rem; font-weight:400; color:var(--muted); letter-spacing:.02em}
+  .card.vacant .card-foot{border-top-color:#EBDCBC}
+
+  .note{
+    background:var(--sand); border:1px solid var(--sand-2); border-radius:12px;
+    padding:.9rem 1.05rem; font-size:.85rem; color:var(--ink-2); margin-top:1.4rem;
+  }
+  .note strong{color:var(--ink)}
+  .note.demo{background:var(--sea-tint); border-color:#CBE2E0}
+
+  /* ---------- map ---------- */
+  .map-shell{background:var(--surface); border:1px solid var(--line); border-radius:18px; padding:clamp(.9rem,2vw,1.4rem); box-shadow:var(--shadow); margin-top:1.8rem}
+  .map-scroll{overflow-x:auto; -webkit-overflow-scrolling:touch; border-radius:12px}
+  .map-scroll svg{display:block; min-width:820px; width:100%; height:auto}
+  .scroll-hint{font-size:.78rem; color:var(--muted); margin:.55rem 0 0; display:flex; align-items:center; gap:.4rem}
+  @media(min-width:900px){ .scroll-hint{display:none} }
+  .legend{display:flex; flex-wrap:wrap; gap:.5rem 1.1rem; margin-top:1rem; padding-top:.9rem; border-top:1px solid var(--line); font-size:.8rem; color:var(--ink-2)}
+  .legend span{display:inline-flex; align-items:center; gap:.42rem}
+  .sw{width:22px;height:14px;border-radius:4px;border:1.5px solid var(--line-2); background:#fff; flex:none}
+  .sw.vac{border:1.5px dashed var(--gold); background:#FDF7EA}
+  .sw.court{background:var(--sand-2); border-color:var(--sand-2)}
+  .sw.sel{background:var(--sea-tint); border-color:var(--sea)}
+
+  .map-detail{
+    margin-top:1rem; background:var(--sand); border:1px solid var(--sand-2); border-radius:12px;
+    padding:.95rem 1.1rem; min-height:88px; display:flex; gap:1rem; align-items:center; flex-wrap:wrap;
+  }
+  .map-detail .md-shop{
+    flex:none; width:3rem; height:3rem; border-radius:10px; background:var(--surface); border:1px solid var(--line-2);
+    display:grid; place-items:center; font-family:"Fraunces",serif; font-weight:700; font-size:1.05rem; color:var(--sea-deep);
+  }
+  .map-detail h4{font-family:"Fraunces",serif; font-size:1.1rem; margin:0}
+  .map-detail p{margin:.1rem 0 0; font-size:.87rem; color:var(--ink-2)}
+  .map-detail .md-body{flex:1; min-width:200px}
+  .map-detail.empty .md-shop{color:var(--muted); font-family:"DM Sans",sans-serif; font-size:.7rem; letter-spacing:.06em}
+
+  /* svg unit styling */
+  .u rect.box{fill:#fff; stroke:#B9AB94; stroke-width:1.5; transition:fill .16s ease, stroke .16s ease}
+  .u text{pointer-events:none}
+  .u{cursor:pointer}
+  .u:hover rect.box{fill:var(--sea-tint); stroke:var(--sea)}
+  .u:focus{outline:none}
+  .u:focus-visible rect.box{stroke:var(--sea); stroke-width:3}
+  .u.sel rect.box{fill:var(--sea-tint); stroke:var(--sea); stroke-width:2.5}
+  .u.vac rect.box{fill:#FDF7EA; stroke:var(--gold); stroke-dasharray:7 5}
+  .u.dim{opacity:.3}
+  .u.match rect.box{fill:var(--sea-tint); stroke:var(--sea)}
+  .u-name{font-family:"DM Sans",sans-serif; font-size:13px; font-weight:500; fill:#12262B}
+  .u-no{font-family:"Fraunces",serif; font-size:12.5px; font-weight:700; fill:#083E44}
+  .u-cat{font-family:"DM Sans",sans-serif; font-size:9.5px; font-weight:700; letter-spacing:.9px; fill:#6C8288}
+  .svg-label{font-family:"DM Sans",sans-serif; font-size:12px; fill:#6C8288; letter-spacing:.5px}
+  .svg-label.big{font-size:14px; font-weight:700; fill:#33484E; letter-spacing:1.6px}
+  .svg-label.street{font-size:14px; font-weight:700; fill:#8A7C66; letter-spacing:3px}
+
+  /* ---------- getting here ---------- */
+  .split{display:grid; gap:clamp(1.4rem,3.5vw,2.6rem); grid-template-columns:1fr}
+  @media(min-width:900px){ .split{grid-template-columns:1.05fr .95fr; align-items:start} }
+  .steps{list-style:none; margin:1.4rem 0 0; padding:0; display:grid; gap:.1rem}
+  .steps li{display:grid; grid-template-columns:auto 1fr; gap:1rem; padding:0 0 1.15rem}
+  .steps .n{
+    width:2rem;height:2rem;border-radius:50%;background:var(--sea);color:#fff;
+    display:grid;place-items:center;font-size:.85rem;font-weight:700; position:relative;
+  }
+  .steps li:not(:last-child) .n::after{content:""; position:absolute; top:2rem; left:50%; width:1.5px; height:calc(100% + .35rem); background:var(--line-2); transform:translateX(-50%)}
+  .steps h4{font-family:"DM Sans",sans-serif; font-size:.98rem; font-weight:700; margin:.18rem 0 .15rem}
+  .steps p{font-size:.9rem; color:var(--ink-2); margin:0}
+  .imgpair{display:grid; gap:1rem; grid-template-columns:1fr 1fr}
+  .imgpair figure{margin:0; position:relative}
+  .imgpair img{width:100%; height:100%; object-fit:cover; border-radius:12px; aspect-ratio:3/4}
+  .imgpair figure:first-child img{aspect-ratio:3/4}
+  .stamp{
+    position:absolute; top:8px; left:8px; background:rgba(18,38,43,.8); color:#F0C97A;
+    font-size:.63rem; font-weight:700; letter-spacing:.09em; text-transform:uppercase;
+    padding:.22rem .45rem; border-radius:5px;
+  }
+
+  /* ---------- cruise numbers ---------- */
+  .kpis{display:grid; gap:1px; background:var(--line); border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; margin-top:2rem}
+  @media(min-width:640px){ .kpis{grid-template-columns:1fr 1fr} }
+  @media(min-width:980px){ .kpis{grid-template-columns:repeat(4,1fr)} }
+  .kpi{background:var(--surface); padding:1.25rem 1.2rem}
+  .kpi .v{font-family:"Fraunces",serif; font-size:clamp(1.85rem,3.4vw,2.5rem); font-weight:700; line-height:1; letter-spacing:-.02em; color:var(--ink)}
+  .kpi .v small{font-size:.5em; font-weight:600}
+  .kpi .k{font-size:.8rem; color:var(--ink-2); margin-top:.5rem; line-height:1.4}
+  .kpi .src{font-size:.72rem; color:var(--muted); margin-top:.45rem}
+
+  .barchart{margin-top:1.4rem}
+  .barchart .row{margin-bottom:1.05rem}
+  .barchart .row:last-child{margin-bottom:0}
+  .barchart .lbl{display:flex; justify-content:space-between; gap:1rem; font-size:.86rem; margin-bottom:.35rem}
+  .barchart .lbl b{font-family:"Fraunces",serif; font-size:1rem; color:var(--ink)}
+  .barchart .lbl span{color:var(--ink-2)}
+  .track{height:12px; background:var(--sand-2); border-radius:6px; overflow:hidden}
+  .fill{height:100%; background:var(--sea); border-radius:6px}
+  .axis{font-size:.72rem; color:var(--muted); margin-top:.55rem; display:flex; justify-content:space-between}
+
+  .two{display:grid; gap:clamp(1.2rem,3vw,2rem); grid-template-columns:1fr; margin-top:2rem}
+  @media(min-width:900px){ .two{grid-template-columns:1fr 1fr} }
+  .panel{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:1.4rem 1.4rem 1.2rem; box-shadow:0 1px 2px rgba(18,38,43,.04)}
+  .panel.warn{background:#FFFBF3; border-color:#EBDCBC}
+  .panel h3{margin-bottom:.6rem}
+  .panel p:last-child{margin-bottom:0}
+  .panel .tagline{font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; font-weight:700; color:var(--gold); margin-bottom:.5rem}
+  .panel.good .tagline{color:var(--sea)}
+
+  /* ---------- proposal ---------- */
+  .proposal{background:var(--sand)}
+  .prop-grid{display:grid; gap:1rem; grid-template-columns:1fr; margin-top:2rem}
+  @media(min-width:760px){ .prop-grid{grid-template-columns:1fr 1fr} }
+  .prop{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:1.35rem}
+  .prop .num{font-family:"Fraunces",serif; font-weight:700; color:var(--sea); font-size:.95rem; letter-spacing:.02em; margin-bottom:.45rem}
+  .prop h3{font-size:1.12rem; margin-bottom:.5rem}
+  .prop p{font-size:.92rem; color:var(--ink-2); margin-bottom:0}
+  .cost{
+    margin-top:2rem; background:var(--sea-deep); color:#DDEAE9; border-radius:var(--radius); padding:clamp(1.3rem,3vw,2rem);
+  }
+  .cost h3{color:#fff; margin-bottom:.7rem}
+  .cost p{color:#C6DAD8}
+  .cost p:last-child{margin-bottom:0}
+  .cost .num{font-family:"Fraunces",serif; color:#E7B450; font-weight:700}
+  .checklist{list-style:none; margin:1.2rem 0 0; padding:0; display:grid; gap:.6rem}
+  .checklist li{display:grid; grid-template-columns:auto 1fr; gap:.65rem; font-size:.92rem; color:var(--ink-2); align-items:start}
+  .checklist svg{width:17px;height:17px;margin-top:.25rem;color:var(--sea);flex:none}
+  .decision{
+    margin-top:1.6rem; border:1.5px dashed var(--line-2); border-radius:12px; background:var(--surface);
+    padding:1.1rem 1.25rem; font-size:.93rem;
+  }
+  .decision b{display:block; font-family:"Fraunces",serif; font-size:1.02rem; color:var(--ink); margin-bottom:.3rem}
+
+  /* ---------- footer ---------- */
+  footer.site{background:var(--ink); color:#B9CACB; padding:clamp(2.6rem,5vw,4rem) 0 2rem; font-size:.9rem}
+  footer.site a{color:#8FC8C8}
+  .fgrid{display:grid; gap:1.8rem; grid-template-columns:1fr}
+  @media(min-width:760px){ .fgrid{grid-template-columns:1.3fr 1fr 1fr} }
+  footer.site h4{font-family:"DM Sans",sans-serif; font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:#7E9899; margin:0 0 .7rem; font-weight:700}
+  footer.site p{margin:0 0 .45rem}
+  footer.site .fbrand{font-family:"Fraunces",serif; font-size:1.35rem; color:#fff; font-weight:700; margin-bottom:.4rem}
+  .fbot{margin-top:2.2rem; padding-top:1.2rem; border-top:1px solid #2A3E43; font-size:.78rem; color:#7E9899; display:flex; flex-wrap:wrap; gap:.6rem 1.4rem; justify-content:space-between}
+  .sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  :focus-visible{outline:2.5px solid var(--sea); outline-offset:2px; border-radius:4px}
+  @media(prefers-reduced-motion:reduce){*{transition:none !important; animation:none !important}}
+</style>
+</head>
+<body>
+
+<div class="banner">
+  <div class="wrap">
+    <span class="dot" aria-hidden="true"></span>
+    <span>Concept prepared for <b>The Cruise Deck</b> / <b>Guideline Investors Limited</b> by <b>Scaled Solutions</b>. Not yet live.</span>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <svg class="mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+        <rect x="1" y="1" width="38" height="38" rx="9" fill="#083E44"/>
+        <path d="M8 27h24" stroke="#E7B450" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M11 27V16l9-6 9 6v11" stroke="#fff" stroke-width="2.2" stroke-linejoin="round"/>
+        <path d="M17 27v-6h6v6" stroke="#8FC8C8" stroke-width="2" stroke-linejoin="round"/>
+      </svg>
+      <span>
+        <b>The Cruise Deck</b>
+        <span>Mount Maunganui</span>
+      </span>
+    </a>
+    <nav class="main" aria-label="Main">
+      <a href="#directory">Directory</a>
+      <a href="#map">Arcade map</a>
+      <a href="#getting-here">Getting here</a>
+      <a href="#cruise">Cruise season</a>
+      <a href="#proposal" class="cta">The proposal</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">169 Maunganui Road, Mount Maunganui</p>
+      <h1>The Mount's <em>hidden</em> arcade.</h1>
+      <p class="lede">Thirteen independent businesses, a covered courtyard and a laneway you have walked past. The Cruise Deck is set back off the footpath of Maunganui Road, so almost nobody finds it by accident. This is the map that fixes that.</p>
+      <p class="addr">
+        <strong>Open roughly 8am to 11pm daily</strong>
+        <span aria-hidden="true">&middot;</span>
+        <span>4.6 from 45 Google reviews</span>
+        <span aria-hidden="true">&middot;</span>
+        <span>Named the Cruise Deck since the 2000 remodel</span>
+      </p>
+      <ul class="chips">
+        <li class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Aggregate tenant hours</li>
+        <li class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9 12h6M12 9v6"/></svg> Wheelchair and pram accessible</li>
+        <li class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 15c0-3 3-5 5-5h6c2 0 5 2 5 5v3H4z"/><path d="M7 10V6M17 10V6"/></svg> Dog friendly</li>
+        <li class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 19h18M5 19V9l7-5 7 5v10"/></svg> Covered courtyard, bean bags</li>
+      </ul>
+    </div>
+    <figure class="hero-figure" style="margin:0">
+      <img src="images/mount-4.jpg" alt="Mount Maunganui coastline" loading="eager">
+      <p class="photo-note"><b>Placeholder image.</b> Mount Maunganui scenery, licensed stock. This is not the Cruise Deck. Photography of the arcade, courtyard and signage is still to be shot.</p>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ THE INSIGHT ============ -->
+<section class="band" id="hidden">
+  <div class="wrap band-grid">
+    <div>
+      <p class="eyebrow" style="color:#E7B450">The problem this site solves</p>
+      <h2>Everyone who writes about it uses the same word.</h2>
+      <p class="lede">Independent sources describing the Cruise Deck converge on one idea: it is hidden. One former tenant was literally trading under the name Hideaway. That is charming in a review and expensive in a lease.</p>
+      <ul class="quotes">
+        <li>"hidden gem"<span>Recurring in public descriptions of the complex</span></li>
+        <li>"tucked away" &middot; "at the back" &middot; "off the main street"<span>How visitors describe finding it</span></li>
+      </ul>
+    </div>
+    <div>
+      <figure class="band-figure" style="margin:0; position:relative">
+        <img src="images/mount-2.jpg" alt="Mount Maunganui, Bay of Plenty" loading="lazy">
+        <span class="stamp">Stock placeholder</span>
+      </figure>
+      <div class="callout">
+        <p><strong>A directory with a map is a literal fix for a literal problem.</strong> The arcade is invisible from the footpath of the Mount's main shopping street. Foot traffic passes the entrance rather than entering it.</p>
+        <p style="margin-bottom:0">You cannot move the building. You can make sure that when somebody searches for a florist, a gluten free lunch, a laundromat or a tattoo studio in Mount Maunganui, the arcade appears, with a plan showing exactly where each door is.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DIRECTORY ============ -->
+<section id="directory">
+  <div class="wrap">
+    <p class="eyebrow">The directory</p>
+    <h2>Who is here, and who is open right now.</h2>
+    <p class="lede">Thirteen tenancies plus one space available. Filter by what you actually came for.</p>
+
+    <div class="toolbar" role="group" aria-label="Directory filters">
+      <div class="filters" id="cat-filters">
+        <button class="fbtn" data-cat="all" aria-pressed="true">All</button>
+        <button class="fbtn" data-cat="food" aria-pressed="false">Food &amp; drink</button>
+        <button class="fbtn" data-cat="shopping" aria-pressed="false">Shopping</button>
+        <button class="fbtn" data-cat="services" aria-pressed="false">Services</button>
+        <button class="fbtn" data-cat="beauty" aria-pressed="false">Beauty</button>
+      </div>
+      <div class="toggles" id="tag-filters">
+        <button class="fbtn tog" data-tag="open" aria-pressed="false">Open now</button>
+        <button class="fbtn tog" data-tag="gf" aria-pressed="false">Gluten free</button>
+        <button class="fbtn tog" data-tag="dog" aria-pressed="false">Dog friendly</button>
+      </div>
+    </div>
+    <p class="result-line" id="result-line" aria-live="polite"></p>
+
+    <div class="grid" id="grid"></div>
+
+    <div class="note demo">
+      <strong>How the open and closed status works.</strong> Every tile is calculated live against your device clock from placeholder trading hours written for this concept. On the real site each tenant confirms their own hours once, and the arcade holds a single canonical set. That is the highest value feature here: third party listings for this complex are already inconsistent, and Guideline has no control over any of them.
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ============ MAP ============ -->
+<section id="map">
+  <div class="wrap">
+    <p class="eyebrow">The centrepiece</p>
+    <h2>An arcade plan, not a pin on a street.</h2>
+    <p class="lede">A dropped pin puts you on Maunganui Road. It does not tell you that the florist is at the back left and the burger place is halfway down on the right. Select any tenancy on the plan, or filter the directory above and watch the matching doors light up.</p>
+
+    <div class="map-shell">
+      <div class="map-scroll">
+        <svg viewBox="0 0 1000 830" aria-labelledby="maptitle mapdesc">
+          <title id="maptitle">Indicative plan of The Cruise Deck arcade</title>
+          <desc id="mapdesc">A schematic plan showing the arcade set back from Maunganui Road behind street frontage buildings, with tenancies down the left and right sides, four tenancies across the rear, and a covered courtyard in the middle.</desc>
+          <defs>
+            <pattern id="hatch" width="9" height="9" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+              <rect width="9" height="9" fill="#E6E0D5"/>
+              <line x1="0" y1="0" x2="0" y2="9" stroke="#CFC5B3" stroke-width="3"/>
+            </pattern>
+            <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0 0 L10 5 L0 10 z" fill="#0B6C74"/>
+            </marker>
+          </defs>
+
+          <!-- arcade floor -->
+          <rect x="46" y="50" width="908" height="604" rx="12" fill="#F6F1E8" stroke="#E0D6C6"/>
+          <text class="svg-label big" x="500" y="38" text-anchor="middle">REAR OF SITE</text>
+
+          <!-- courtyard -->
+          <rect x="285" y="190" width="430" height="450" rx="10" fill="#EADFCB" stroke="#CFC2AD" stroke-dasharray="6 5"/>
+          <text class="svg-label" x="500" y="232" text-anchor="middle" style="font-size:14px;font-weight:700;fill:#33484E">Covered outdoor courtyard</text>
+          <text class="svg-label" x="500" y="254" text-anchor="middle">Bean bags, seating, shared tables</text>
+          <g fill="#DCCDB2" stroke="#C6B79A" stroke-width="1.2">
+            <ellipse cx="360" cy="330" rx="30" ry="22"/>
+            <ellipse cx="440" cy="372" rx="30" ry="22"/>
+            <ellipse cx="560" cy="330" rx="30" ry="22"/>
+            <ellipse cx="640" cy="372" rx="30" ry="22"/>
+            <ellipse cx="400" cy="470" rx="30" ry="22"/>
+            <ellipse cx="600" cy="470" rx="30" ry="22"/>
+            <rect x="470" y="430" width="60" height="60" rx="8"/>
+            <circle cx="330" cy="560" r="20"/>
+            <circle cx="670" cy="560" r="20"/>
+          </g>
+          <text class="svg-label" x="500" y="600" text-anchor="middle" style="font-size:11px">Planting and seating indicative</text>
+
+          <!-- rear row -->
+          <g class="u" data-id="hot" tabindex="0" role="button" aria-label="House of Travel Mount Maunganui, rear of arcade">
+            <rect class="box" x="60" y="70" width="214" height="105" rx="8"/>
+            <rect x="72" y="82" width="46" height="21" rx="6" fill="#F3EADB" stroke="#DDD0B8"/>
+            <text class="u-no" x="95" y="97" text-anchor="middle" style="font-size:10.5px;letter-spacing:.5px">TBC</text>
+            <text class="u-cat" x="262" y="97" text-anchor="end">SERVICES</text>
+            <text class="u-name" x="72" y="128">House of Travel</text>
+            <text class="u-name" x="72" y="146">Mount Maunganui</text>
+          </g>
+          <g class="u" data-id="arte" tabindex="0" role="button" aria-label="Arte Haus Gallery, rear of arcade">
+            <rect class="box" x="282" y="70" width="214" height="105" rx="8"/>
+            <rect x="294" y="82" width="46" height="21" rx="6" fill="#F3EADB" stroke="#DDD0B8"/>
+            <text class="u-no" x="317" y="97" text-anchor="middle" style="font-size:10.5px;letter-spacing:.5px">TBC</text>
+            <text class="u-cat" x="484" y="97" text-anchor="end">SHOPPING</text>
+            <text class="u-name" x="294" y="128">Arte Haus</text>
+            <text class="u-name" x="294" y="146">Gallery</text>
+          </g>
+          <g class="u" data-id="enjay" tabindex="0" role="button" aria-label="En Jay Hair, rear of arcade">
+            <rect class="box" x="504" y="70" width="214" height="105" rx="8"/>
+            <rect x="516" y="82" width="46" height="21" rx="6" fill="#F3EADB" stroke="#DDD0B8"/>
+            <text class="u-no" x="539" y="97" text-anchor="middle" style="font-size:10.5px;letter-spacing:.5px">TBC</text>
+            <text class="u-cat" x="706" y="97" text-anchor="end">BEAUTY</text>
+            <text class="u-name" x="516" y="128">En Jay Hair</text>
+          </g>
+          <g class="u" data-id="groovy" tabindex="0" role="button" aria-label="Groovy Eatery, rear of arcade">
+            <rect class="box" x="726" y="70" width="214" height="105" rx="8"/>
+            <rect x="738" y="82" width="46" height="21" rx="6" fill="#F3EADB" stroke="#DDD0B8"/>
+            <text class="u-no" x="761" y="97" text-anchor="middle" style="font-size:10.5px;letter-spacing:.5px">TBC</text>
+            <text class="u-cat" x="928" y="97" text-anchor="end">FOOD</text>
+            <text class="u-name" x="738" y="128">Groovy Eatery</text>
+          </g>
+
+          <!-- left column, back to front -->
+          <g class="u" data-id="agave" tabindex="0" role="button" aria-label="Shop 4, Agave Bistro and Drinkery">
+            <rect class="box" x="60" y="190" width="210" height="86" rx="8"/>
+            <rect x="72" y="202" width="40" height="21" rx="6" fill="#F3EADB" stroke="#DDD0B8"/>
+            <text class="u-no" x="92" y="217" text-anchor="middle">4</text>
+            <text class="u-cat" x="258" y="217" text-anchor="end">FOOD</text>
+            <text class="u-name" x="72" y="243">Agave Bistro</text>
+            <text class="u-name" x="72" y="261">&amp; Drinkery</text>
+          </g>
+          <g class="u vac" data-id="vacant" tabindex="0" role="button" aria-label="Shop 2B, space available for lease">
+            <rect class="box" x="60" y="281" width="210" height="86" rx="8"/>
+            <rect x="72" y="293" width="40" height="21" rx="6" fill="#fff" stroke="#A8791E"/>
+            <text class="u-no" x="92" y="308" text-anchor="middle" style="fill:#A8791E">2B</text>
+            <text class="u-cat" x="258" y="308" text-anchor="end" style="fill:#A8791E">VACANT</text>
+            <text class="u-name" x="72" y="334" style="fill:#A8791E;font-weight:700">Space available</text>
+            <text class="u-name" x="72" y="352" style="fill:#8A7C66;font-size:11.5px">$23,900 + GST + OPEX</text>
+          </g>
+          <g class="u" data-id="amplify" tabindex="0" role="button" aria-label="Shop 2A, Amplify Her">
+            <rect class="box" x="60" y="372" width="210" height="86" rx="8"/>
+            <rect x="72" y="384" width="40" height="21" rx="6" fill="#F3EADB" stroke="#DDD0B8"/>
+            <text class="u-no" x="92" y="399" text-anchor="middle">2A</text>
+            <text class="u-cat" x="258" y="399" text-anchor="end">BEAUTY</text>
+            <text class="u-name" x="72" y="425">Amplify Her</text>
+            <text class="u-name" x="72" y="443" style="fill:#6C8288;font-size:11.5px">Brow and beauty studio</text>
+          </g>
+          <g class="u" data-id="longboards" tabindex="0" role="button" aria-label="Shop 1A, Mount Longboards">
+            <rect class="box" x="60" y="463" width="210" height="86" rx="8"/>
+            <rect x="72" y="475" width="40" height="21" rx="6" fill="#F3EADB" stroke="#DDD0B8"/>
+            <text class="u-no" x="92" y="490" text-anchor="middle">1A</text>
+            <text class="u-cat" x="258" y="490" text-anchor="end">SHOPPING</text>
+            <text class="u-name" x="72" y="516">Mount</text>
+            <text class="u-name" x="72" y="534">Longboards</text>
+          </g>
+          <g class="u" data-id="blur" tabindex="0" role="button" aria-label="Shop 1a, Blur Eyecare Mt Maunganui">
+            <rect class="box" x="60" y="554" width="210" height="86" rx="8"/>
+            <rect x="72" y="566" width="40" height="21" rx="6" fill="#F3EADB" stroke="#DDD0B8"/>
+            <text class="u-no" x="92" y="581" text-anchor="middle">1a</text>
+            <text class="u-cat" x="258" y="581" text-anchor="end">SERVICES</text>
+            <text class="u-name" x="72" y="607">Blur Eyecare</text>
+            <text class="u-name" x="72" y="625" style="fill:#6C8288;font-size:11.5px">Optometrist</text>
+          </g>
+
+          <!-- right column, back to front -->
+          <g class="u" data-id="electric" tabindex="0" role="button" aria-label="Shop 5b, Electric Soul Tattoo and Gallery">
+            <rect class="box" x="730" y="190" width="210" height="86" rx="8"/>
+            <rect x="742" y="202" width="40" height="21" rx="6" fill="#F3EADB" stroke="#DDD0B8"/>
+            <text class="u-no" x="762" y="217" text-anchor="middle">5b</text>
+            <text class="u-cat" x="928" y="217" text-anchor="end">SERVICES</text>
+            <text class="u-name" x="742" y="243">Electric Soul</text>
+            <text class="u-name" x="742" y="261">Tattoo &amp; Gallery</text>
+          </g>
+          <g class="u" data-id="onyx" tabindex="0" role="button" aria-label="Shop 6A, Onyx Laundromat">
+            <rect class="box" x="730" y="281" width="210" height="86" rx="8"/>
+            <rect x="742" y="293" width="40" height="21" rx="6" fill="#F3EADB" stroke="#DDD0B8"/>
+            <text class="u-no" x="762" y="308" text-anchor="middle">6A</text>
+            <text class="u-cat" x="928" y="308" text-anchor="end">SERVICES</text>
+            <text class="u-name" x="742" y="334">Onyx Laundromat</text>
+            <text class="u-name" x="742" y="352" style="fill:#6C8288;font-size:11.5px">Self service &amp; commercial</text>
+          </g>
+          <g class="u" data-id="barn" tabindex="0" role="button" aria-label="Shop 7, THE BARN Burger and Grill">
+            <rect class="box" x="730" y="372" width="210" height="86" rx="8"/>
+            <rect x="742" y="384" width="40" height="21" rx="6" fill="#F3EADB" stroke="#DDD0B8"/>
+            <text class="u-no" x="762" y="399" text-anchor="middle">7</text>
+            <text class="u-cat" x="928" y="399" text-anchor="end">FOOD</text>
+            <text class="u-name" x="742" y="425">THE BARN</text>
+            <text class="u-name" x="742" y="443">Burger &amp; Grill</text>
+          </g>
+          <g class="u" data-id="myrrh" tabindex="0" role="button" aria-label="Shop 9, Myrrh and Co Florist">
+            <rect class="box" x="730" y="463" width="210" height="86" rx="8"/>
+            <rect x="742" y="475" width="40" height="21" rx="6" fill="#F3EADB" stroke="#DDD0B8"/>
+            <text class="u-no" x="762" y="490" text-anchor="middle">9</text>
+            <text class="u-cat" x="928" y="490" text-anchor="end">SHOPPING</text>
+            <text class="u-name" x="742" y="516">Myrrh &amp; Co</text>
+            <text class="u-name" x="742" y="534">Florist</text>
+          </g>
+          <g class="u" data-id="sabal" tabindex="0" role="button" aria-label="Shop 10, Sabal, gluten free salad and poke bowls">
+            <rect class="box" x="730" y="554" width="210" height="86" rx="8"/>
+            <rect x="742" y="566" width="40" height="21" rx="6" fill="#F3EADB" stroke="#DDD0B8"/>
+            <text class="u-no" x="762" y="581" text-anchor="middle">10</text>
+            <text class="u-cat" x="928" y="581" text-anchor="end">FOOD</text>
+            <text class="u-name" x="742" y="607">Sabal</text>
+            <text class="u-name" x="742" y="625" style="fill:#6C8288;font-size:11.5px">100% gluten free</text>
+          </g>
+
+          <!-- entry throat -->
+          <rect x="430" y="640" width="140" height="108" fill="#F6F1E8" stroke="#E0D6C6"/>
+          <line x1="430" y1="640" x2="430" y2="748" stroke="#B9AB94" stroke-width="2"/>
+          <line x1="570" y1="640" x2="570" y2="748" stroke="#B9AB94" stroke-width="2"/>
+          <path d="M500 736 L500 664" stroke="#0B6C74" stroke-width="2.5" stroke-dasharray="7 6" marker-end="url(#arrow)"/>
+          <text class="svg-label" x="590" y="700" style="font-size:13px;font-weight:700;fill:#0B6C74">Arcade entry</text>
+          <text class="svg-label" x="590" y="718" style="font-size:11.5px">Set back off the footpath</text>
+
+          <!-- street frontage buildings -->
+          <rect x="46" y="655" width="384" height="90" rx="6" fill="url(#hatch)" stroke="#C6B79A"/>
+          <rect x="570" y="655" width="384" height="90" rx="6" fill="url(#hatch)" stroke="#C6B79A"/>
+          <text class="svg-label" x="238" y="695" text-anchor="middle" style="font-size:11.5px;fill:#7A6E5C">Street frontage buildings</text>
+          <text class="svg-label" x="238" y="712" text-anchor="middle" style="font-size:11.5px;fill:#7A6E5C">(not part of the arcade)</text>
+          <text class="svg-label" x="762" y="695" text-anchor="middle" style="font-size:11.5px;fill:#7A6E5C">Street frontage buildings</text>
+          <text class="svg-label" x="762" y="712" text-anchor="middle" style="font-size:11.5px;fill:#7A6E5C">(not part of the arcade)</text>
+
+          <!-- footpath and street -->
+          <rect x="0" y="748" width="1000" height="26" fill="#EFE9DF"/>
+          <text class="svg-label" x="20" y="766" style="font-size:11px">FOOTPATH</text>
+          <rect x="0" y="774" width="1000" height="56" fill="#DFD7C8"/>
+          <line x1="0" y1="802" x2="1000" y2="802" stroke="#F6F1E8" stroke-width="3" stroke-dasharray="26 20"/>
+          <text class="svg-label street" x="500" y="807" text-anchor="middle">MAUNGANUI ROAD</text>
+          <text class="svg-label" x="980" y="766" text-anchor="end" style="font-size:11px">INDICATIVE ONLY &middot; NOT TO SCALE</text>
+        </svg>
+      </div>
+
+      <p class="scroll-hint">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
+        Scroll sideways to see the full plan.
+      </p>
+
+      <div class="map-detail empty" id="map-detail">
+        <div class="md-shop" id="md-shop">SHOP</div>
+        <div class="md-body">
+          <h4 id="md-name">Select a tenancy</h4>
+          <p id="md-text">Tap or click any unit on the plan to see who is there, what they do and whether they are open right now.</p>
+        </div>
+      </div>
+
+      <div class="legend">
+        <span><i class="sw" aria-hidden="true"></i> Tenancy</span>
+        <span><i class="sw vac" aria-hidden="true"></i> Space available</span>
+        <span><i class="sw sel" aria-hidden="true"></i> Selected or matching your filter</span>
+        <span><i class="sw court" aria-hidden="true"></i> Covered courtyard</span>
+      </div>
+    </div>
+
+    <div class="note">
+      <strong>About this plan.</strong> The layout is indicative and drawn by hand for this concept: it shows the relationship between the street, the entry and the tenancies, not surveyed dimensions. Shop numbers are as confirmed, and the four tenancies without a confirmed number are marked TBC rather than guessed at. A measured plan, or a walk through with a tape and a camera, would be step one of the real build.
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ============ GETTING HERE ============ -->
+<section id="getting-here">
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow">Getting here</p>
+      <h2>From the cruise berth, on foot.</h2>
+      <p class="lede">On a ship day the arcade is a short flat walk from the gangway. It is worth saying out loud, because a passenger with four hours ashore will not gamble on an unmarked laneway.</p>
+      <ol class="steps">
+        <li>
+          <span class="n">1</span>
+          <div>
+            <h4>The berth sits about 250 metres inside the port exit gate</h4>
+            <p>You are through the gate quickly. The township itself is around one kilometre from the berth.</p>
+          </div>
+        </li>
+        <li>
+          <span class="n">2</span>
+          <div>
+            <h4>Follow Salisbury Avenue toward the township</h4>
+            <p>A five to ten minute walk, flat the whole way.</p>
+          </div>
+        </li>
+        <li>
+          <span class="n">3</span>
+          <div>
+            <h4>Maunganui Road, number 169</h4>
+            <p>The arcade is set back off the footpath. Look for the entry between the street frontage buildings rather than a shopfront on the street.</p>
+          </div>
+        </li>
+      </ol>
+      <div class="note" style="margin-top:1.6rem">
+        <strong>Year round, not just ship days.</strong> A laundromat and an optometrist are not cruise draws. The same map serves a local looking for the florist, a family looking for a covered courtyard out of the wind, and somebody searching gluten free Mount Maunganui in the middle of July. Cruise is the second sentence on this site, not the first.
+      </div>
+    </div>
+    <div class="imgpair">
+      <figure>
+        <img src="images/mount-1.jpg" alt="Mount Maunganui, Bay of Plenty" loading="lazy">
+        <span class="stamp">Stock placeholder</span>
+      </figure>
+      <figure>
+        <img src="images/mount-5.jpg" alt="Mount Maunganui coast" loading="lazy">
+        <span class="stamp">Stock placeholder</span>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ============ CRUISE ============ -->
+<section id="cruise">
+  <div class="wrap">
+    <p class="eyebrow">The cruise season, honestly</p>
+    <h2>The people already arrive. The question is what share of them find you.</h2>
+    <p class="lede">Tauranga is one of the busiest cruise ports in the country and the arcade sits within an easy walk of the berth. None of the following is a growth forecast. It is the size of the pool that already walks past.</p>
+
+    <figure style="margin:1.9rem 0 0; position:relative">
+      <img src="images/mount-3.jpg" alt="Mount Maunganui and the harbour" loading="lazy" style="width:100%; aspect-ratio:21/8; object-fit:cover; border-radius:14px">
+      <span class="stamp">Stock placeholder</span>
+    </figure>
+
+    <div class="kpis">
+      <div class="kpi">
+        <div class="v">91</div>
+        <div class="k">ship calls in the 2024/25 season</div>
+        <div class="src">Port of Tauranga season figures</div>
+      </div>
+      <div class="kpi">
+        <div class="v">206,000<small>+</small></div>
+        <div class="k">people ashore in 2024/25: roughly 143,279 passengers plus 62,804 crew</div>
+        <div class="src">2024/25 season</div>
+      </div>
+      <div class="kpi">
+        <div class="v">87</div>
+        <div class="k">ships booked across 74 dates for 2025/26, October to May, with capacity for 165,000 passengers and 72,000 crew</div>
+        <div class="src">2025/26 season schedule</div>
+      </div>
+      <div class="kpi">
+        <div class="v">$111.8<small>m</small></div>
+        <div class="k">Bay of Plenty economic output from cruise, 2023/24</div>
+        <div class="src">Regional economic output</div>
+      </div>
+    </div>
+
+    <div class="two">
+      <div class="panel warn">
+        <p class="tagline">The headwind, stated plainly</p>
+        <h3>National cruise bookings for 2025/26 fell more than 40 percent.</h3>
+        <p>That is the number nobody selling a cruise themed anything wants to put on the page, so here it is first. Tauranga held up far better than the country: calls into this port were down only around four percent.</p>
+        <div class="barchart" role="figure" aria-label="Decline in cruise activity for 2025 to 2026: New Zealand bookings down more than 40 percent, Tauranga ship calls down 4 percent.">
+          <div class="row">
+            <div class="lbl"><span>New Zealand bookings</span><b>down 40%+</b></div>
+            <div class="track"><div class="fill" style="width:100%"></div></div>
+          </div>
+          <div class="row">
+            <div class="lbl"><span>Tauranga ship calls</span><b>down 4%</b></div>
+            <div class="track"><div class="fill" style="width:10%"></div></div>
+          </div>
+          <div class="axis"><span>0%</span><span>Year on year decline, 2025/26</span><span>40%+</span></div>
+        </div>
+      </div>
+      <div class="panel good">
+        <p class="tagline">The case that survives it</p>
+        <h3>This is a capture rate argument, not a growth argument.</h3>
+        <p>Ships still range from the 184 passengers of the Heritage Adventurer up to the 4,905 of Anthem of the Seas. On a big day, several thousand people walk into a township of that size within a five to ten minute radius of the arcade.</p>
+        <p>The site does not claim to bring more ships. It changes the odds that somebody already standing on Maunganui Road turns into the entry instead of walking past it. If a directory converts even a small extra share of an existing crowd, it pays for itself out of the same crowd that arrived anyway.</p>
+        <p style="margin-bottom:0">And it keeps working in June, when there are no ships at all.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ============ WHAT IS MISSING ============ -->
+<section id="gaps" style="padding-bottom:0">
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow">What this concept is, and is not</p>
+      <h2>Everything above is real except the pictures and the hours.</h2>
+      <p>Tenants, shop numbers, the vacancy, the cruise figures and the description of the site are drawn from confirmed sources. Two things are deliberately marked as placeholder, because inventing them would be worse than leaving them open.</p>
+      <ul class="checklist">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Photography of the arcade is still needed.</strong> There are no usable photos of the complex in circulation. Facebook and TripAdvisor both blocked access during research. Every image on this page is licensed Mount Maunganui stock, used as atmosphere only, and none of them show the Cruise Deck. A half day shoot covering the entry, the courtyard, the signage and each shopfront would replace all of them.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Trading hours are placeholders.</strong> The open and closed logic is real and working. The hours behind it are written for demonstration. Each tenant confirms their own, once, and then the arcade owns the canonical version.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><strong>The tenant list should be signed off by Guideline.</strong> Several businesses that appear in third party directories for this address could not be confirmed as current and have been deliberately left off rather than guessed at. That omission is itself the argument for a single controlled source.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><strong>The plan is indicative.</strong> Unit positions show the relationship between street, entry and tenancy, not a survey. A walk through fixes it in an hour.</span></li>
+      </ul>
+    </div>
+    <figure style="margin:0; position:relative">
+      <img src="images/mount-6.jpg" alt="Mount Maunganui" loading="lazy" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:14px">
+      <span class="stamp">Stock placeholder</span>
+      <p class="photo-note"><b>Not the Cruise Deck.</b> On the live site this frame is the arcade entry from the Maunganui Road footpath, which is the single most useful photograph anyone could take of this property.</p>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ PROPOSAL ============ -->
+<section class="proposal" id="proposal">
+  <div class="wrap">
+    <p class="eyebrow">The proposal, for Guideline Investors</p>
+    <h2>Not a marketing spend. A line in the building outgoings.</h2>
+    <p class="lede">Tenants already fund roughly $122 per square metre per year of operating expenses across this building: the things that keep a complex functioning. A directory that tells people the complex exists belongs in that category, not in a discretionary marketing budget that nobody has approved.</p>
+
+    <div class="prop-grid">
+      <div class="prop">
+        <div class="num">01</div>
+        <h3>Search visibility thirteen small businesses cannot buy alone</h3>
+        <p>Several tenants here have no website at all. Individually they are invisible online. Aggregated under one address, with one set of structured hours, categories and a map, they rank as a destination. A florist, a laundromat and a gluten free lunch spot pull completely different searches into the same doorway.</p>
+      </div>
+      <div class="prop">
+        <div class="num">02</div>
+        <h3>One canonical source for hours and contact details</h3>
+        <p>Third party directories already describe this complex inaccurately, listing businesses that are no longer here and hours that are not current. Guideline has no control over any of them and no way to correct them at the source. An owned site becomes the thing those directories copy from, and the thing Google trusts.</p>
+      </div>
+      <div class="prop">
+        <div class="num">03</div>
+        <h3>The vacancy tile is a leasing tool</h3>
+        <p>Shop 2B is advertised at $23,900 plus GST plus OPEX. On this site it is a permanent, indexed, always current listing sitting inside a page that prospective tenants and their agents will already be reading to size up the neighbours. For a syndicator, that turns a marketing site into a leasing asset, and it is the strongest commercial argument on this page.</p>
+      </div>
+      <div class="prop">
+        <div class="num">04</div>
+        <h3>A template, not a one off</h3>
+        <p>Guideline manages 23 properties, more than 60 tenants and around 260 investors from a dated site that distributes PDF flyers. The Cruise Deck is the hardest version of the problem: multi tenant, hospitality heavy, physically hidden. Solve it here and the same directory, map and vacancy pattern drops onto the other 22 properties at a fraction of the cost of the first one.</p>
+      </div>
+    </div>
+
+    <div class="cost">
+      <h3>How to think about the number</h3>
+      <p>The right comparison is not what a marketing agency charges for a website. It is what this building already spends per square metre, every year, on being a functioning place of business. Against <span class="num">$122 per square metre per year</span> of existing outgoings, a directory that makes the complex findable is a small, recurring, allocable line item, and one that a leasing outcome on <span class="num">Shop 2B</span> alone would cover.</p>
+      <p>Scope, hosting and the maintenance model are for a conversation. What is on this page is the product, not the invoice.</p>
+    </div>
+
+    <div class="decision">
+      <b>One thing to confirm before anything else</b>
+      The property is owned by a syndicate, Boulevard Investment Group, and managed by Guideline Investors Limited. We would want to know whether sign off on something like this sits with Guideline as manager, out of building outgoings, or whether it needs to go to the investor group. That answer changes the shape of the proposal and the timeline, so it is worth settling first.
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <p class="fbrand">The Cruise Deck</p>
+        <p>169 Maunganui Road<br>Mount Maunganui<br>Bay of Plenty, New Zealand</p>
+        <p style="margin-top:.9rem">Open roughly 8am to 11pm daily, as an aggregate of tenant hours. Wheelchair and pram accessible. Dog friendly. Covered outdoor courtyard.</p>
+      </div>
+      <div>
+        <h4>Managed by</h4>
+        <p><strong style="color:#fff">Guideline Investors Limited</strong><br>Tauranga</p>
+        <p><a href="tel:+6475784807">07 578 4807</a></p>
+        <p><a href="mailto:admin@guideline.co.nz">admin@guideline.co.nz</a></p>
+        <p style="margin-top:.7rem">Directors Nicola Younan and Hadi Younan. 23 properties, more than 60 tenants, around 260 investors.</p>
+      </div>
+      <div>
+        <h4>Owned by</h4>
+        <p>Boulevard Investment Group, a property syndicate.</p>
+        <h4 style="margin-top:1.4rem">Leasing</h4>
+        <p>Shop 2B available.<br>$23,900 + GST + OPEX.<br>Enquiries through Guideline.</p>
+      </div>
+    </div>
+    <div class="fbot">
+      <span>Concept only. Prepared by Scaled Solutions for discussion with Guideline Investors Limited. Not a live website.</span>
+      <span>Imagery is licensed Mount Maunganui stock and does not depict the property.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  // Placeholder trading hours for the concept. "H:MM-H:MM" in 24h, index 0 = Sunday.
+  var T = [
+    { id:"blur", shop:"1a", name:"Blur Eyecare Mt Maunganui", cat:"services", catLabel:"Services",
+      blurb:"Independent optometrist and eyewear, in the arcade since 2015.",
+      hours:[null,"9:00-17:00","9:00-17:00","9:00-17:00","9:00-17:00","9:00-17:00","9:00-13:00"] },
+    { id:"longboards", shop:"1A", name:"Mount Longboards", cat:"shopping", catLabel:"Shopping",
+      blurb:"New Zealand surf apparel brand, retail store.",
+      hours:["10:00-16:00","9:00-17:00","9:00-17:00","9:00-17:00","9:00-17:00","9:00-17:00","9:00-17:00"] },
+    { id:"amplify", shop:"2A", name:"Amplify Her", cat:"beauty", catLabel:"Beauty",
+      blurb:"Brow and beauty studio.",
+      hours:[null,null,"9:00-17:00","9:00-17:00","9:00-19:00","9:00-17:00","9:00-15:00"] },
+    { id:"agave", shop:"4", name:"Agave Bistro & Drinkery", cat:"food", catLabel:"Food & drink",
+      blurb:"Bistro and bar. Paella, pasta nights and cocktails. Licensed.",
+      hours:["16:00-22:00",null,"16:00-23:00","16:00-23:00","16:00-23:00","16:00-23:00","16:00-23:00"] },
+    { id:"electric", shop:"5b", name:"Electric Soul Tattoo & Gallery", cat:"services", catLabel:"Services",
+      blurb:"Tattoo studio and art gallery.",
+      hours:[null,null,"10:00-18:00","10:00-18:00","10:00-18:00","10:00-18:00","10:00-16:00"] },
+    { id:"onyx", shop:"6A", name:"Onyx Laundromat", cat:"services", catLabel:"Services",
+      blurb:"Self service and commercial laundry.",
+      hours:["8:00-22:00","8:00-22:00","8:00-22:00","8:00-22:00","8:00-22:00","8:00-22:00","8:00-22:00"] },
+    { id:"barn", shop:"7", name:"THE BARN Burger & Grill", cat:"food", catLabel:"Food & drink", dog:true,
+      blurb:"Burgers and grill. Pet friendly, live music and sport on.",
+      hours:["11:00-21:00","11:00-21:00","11:00-21:00","11:00-21:00","11:00-22:00","11:00-23:00","11:00-23:00"] },
+    { id:"myrrh", shop:"9", name:"Myrrh & Co Florist", cat:"shopping", catLabel:"Shopping",
+      blurb:"Florist.",
+      hours:[null,"9:00-17:00","9:00-17:00","9:00-17:00","9:00-17:00","9:00-17:00","9:00-14:00"] },
+    { id:"sabal", shop:"10", name:"Sabal", cat:"food", catLabel:"Food & drink", gf:true, dog:true,
+      blurb:"100% gluten free salad and poke bowls. Licensed, with a dog friendly deck. The owner is coeliac.",
+      hours:["9:00-15:00","8:00-15:30","8:00-15:30","8:00-15:30","8:00-15:30","8:00-15:30","8:00-15:30"] },
+    { id:"hot", shop:null, name:"House of Travel Mount Maunganui", cat:"services", catLabel:"Services",
+      blurb:"Travel agency.",
+      hours:[null,"9:00-17:00","9:00-17:00","9:00-17:00","9:00-17:00","9:00-17:00","10:00-14:00"] },
+    { id:"arte", shop:null, name:"Arte Haus Gallery", cat:"shopping", catLabel:"Shopping",
+      blurb:"Art gallery.",
+      hours:["10:00-16:00",null,null,"10:00-16:00","10:00-16:00","10:00-16:00","10:00-16:00"] },
+    { id:"enjay", shop:null, name:"En Jay Hair", cat:"beauty", catLabel:"Beauty",
+      blurb:"Hair salon.",
+      hours:[null,null,"9:00-17:00","9:00-17:00","9:00-19:00","9:00-17:00","9:00-14:00"] },
+    { id:"groovy", shop:null, name:"Groovy Eatery", cat:"food", catLabel:"Food & drink",
+      blurb:"Daytime eatery. Breakfast, lunch and coffee, with a surf theme.",
+      hours:["8:00-15:00","8:00-15:00","8:00-15:00","8:00-15:00","8:00-15:00","8:00-15:00","8:00-15:00"] }
+  ];
+
+  var DAYS = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+
+  function mins(s){ var p = s.split(":"); return (+p[0])*60 + (+p[1]); }
+  function fmt(m){
+    var h = Math.floor(m/60), mm = m%60, ap = h >= 12 ? "pm" : "am";
+    var hh = h % 12; if(hh === 0) hh = 12;
+    return hh + (mm ? ":" + (mm < 10 ? "0" + mm : mm) : "") + ap;
+  }
+  function span(str){ var p = str.split("-"); return [mins(p[0]), mins(p[1])]; }
+
+  function status(t, now){
+    var d = now.getDay(), cur = now.getHours()*60 + now.getMinutes();
+    var today = t.hours[d];
+    if(today){
+      var s = span(today);
+      if(cur >= s[0] && cur < s[1]) return { open:true, text:"Closes " + fmt(s[1]) };
+    }
+    for(var i = 0; i < 8; i++){
+      var day = (d + i) % 7, h = t.hours[day];
+      if(!h) continue;
+      var o = span(h)[0];
+      if(i === 0 && cur >= o) continue;
+      var when = i === 0 ? "" : (i === 1 ? "tomorrow " : DAYS[day].slice(0,3) + " ");
+      return { open:false, text:"Opens " + when + fmt(o) };
+    }
+    return { open:false, text:"Hours to be confirmed" };
+  }
+
+  var grid = document.getElementById("grid");
+  var resultLine = document.getElementById("resultLine") || document.getElementById("result-line");
+  var now = new Date();
+
+  function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+
+  // build tiles
+  var html = "";
+  T.forEach(function(t){
+    var st = status(t, now);
+    t._open = st.open;
+    var tags = "";
+    if(t.gf)  tags += '<li class="tag">Gluten free</li>';
+    if(t.dog) tags += '<li class="tag dog">Dog friendly</li>';
+    html +=
+      '<article class="card" data-id="' + t.id + '" data-cat="' + t.cat + '" data-open="' + (st.open ? "1" : "0") + '"' +
+        (t.gf ? ' data-gf="1"' : '') + (t.dog ? ' data-dog="1"' : '') + '>' +
+        '<div class="card-top">' +
+          '<div class="shopno' + (t.shop ? '' : ' none') + '">' + (t.shop ? esc(t.shop) : "TBC") + '</div>' +
+          '<div><p class="cat">' + esc(t.catLabel) + '</p><h3>' + esc(t.name) + '</h3></div>' +
+        '</div>' +
+        '<p class="blurb">' + esc(t.blurb) + '</p>' +
+        (tags ? '<ul class="tags">' + tags + '</ul>' : '') +
+        '<div class="card-foot">' +
+          '<span class="pill ' + (st.open ? "open" : "closed") + '"><i class="led"></i>' + (st.open ? "Open now" : "Closed") + '</span>' +
+          '<span class="hrs">' + st.text + '</span>' +
+          '<button class="maplink" type="button" data-map="' + t.id + '">On the plan' +
+            '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>' +
+          '</button>' +
+        '</div>' +
+      '</article>';
+  });
+
+  // vacancy tile, always shown
+  html +=
+    '<article class="card vacant" data-id="vacant" data-cat="vacant" data-always="1">' +
+      '<div class="card-top">' +
+        '<div class="shopno">2B</div>' +
+        '<div><p class="cat" style="color:#A8791E">Leasing opportunity</p><h3>Space available</h3></div>' +
+      '</div>' +
+      '<p class="blurb">A vacant tenancy in the arcade, available now. Enquiries through Guideline Investors Limited, the property manager.</p>' +
+      '<p class="lease-price">$23,900 <small>plus GST plus OPEX</small></p>' +
+      '<div class="card-foot">' +
+        '<a class="pill call" style="text-decoration:none" href="tel:+6475784807"><i class="led"></i>07 578 4807</a>' +
+        '<span class="hrs"><a href="mailto:admin@guideline.co.nz">admin@guideline.co.nz</a></span>' +
+        '<button class="maplink" type="button" data-map="vacant">On the plan' +
+          '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>' +
+        '</button>' +
+      '</div>' +
+    '</article>';
+
+  grid.innerHTML = html;
+
+  var cards = Array.prototype.slice.call(grid.querySelectorAll(".card"));
+  var units = Array.prototype.slice.call(document.querySelectorAll("svg .u"));
+  var state = { cat:"all", open:false, gf:false, dog:false };
+
+  function matches(c){
+    if(c.dataset.always) return true;
+    if(state.cat !== "all" && c.dataset.cat !== state.cat) return false;
+    if(state.open && c.dataset.open !== "1") return false;
+    if(state.gf && !c.dataset.gf) return false;
+    if(state.dog && !c.dataset.dog) return false;
+    return true;
+  }
+
+  function apply(){
+    var shown = 0, ids = {};
+    cards.forEach(function(c){
+      var ok = matches(c);
+      c.classList.toggle("hidden", !ok);
+      if(ok && !c.dataset.always){ shown++; ids[c.dataset.id] = true; }
+      if(ok && c.dataset.always) ids[c.dataset.id] = true;
+    });
+    var filtering = state.cat !== "all" || state.open || state.gf || state.dog;
+    units.forEach(function(u){
+      var on = ids[u.getAttribute("data-id")];
+      u.classList.toggle("match", !!(filtering && on));
+      u.classList.toggle("dim", !!(filtering && !on));
+    });
+    var bits = [];
+    if(state.cat !== "all") bits.push(document.querySelector('#cat-filters [data-cat="' + state.cat + '"]').textContent.toLowerCase());
+    if(state.open) bits.push("open now");
+    if(state.gf) bits.push("gluten free");
+    if(state.dog) bits.push("dog friendly");
+    resultLine.innerHTML = "Showing <b>" + shown + "</b> of <b>" + T.length + "</b> tenancies" +
+      (bits.length ? " matching " + esc(bits.join(", ")) : "") +
+      ". Plus one space available. Status calculated live from placeholder hours, " +
+      DAYS[now.getDay()] + " " + fmt(now.getHours()*60 + now.getMinutes()) + " on your device.";
+  }
+
+  document.getElementById("cat-filters").addEventListener("click", function(e){
+    var b = e.target.closest(".fbtn"); if(!b) return;
+    state.cat = b.dataset.cat;
+    this.querySelectorAll(".fbtn").forEach(function(x){ x.setAttribute("aria-pressed", String(x === b)); });
+    apply();
+  });
+  document.getElementById("tag-filters").addEventListener("click", function(e){
+    var b = e.target.closest(".fbtn"); if(!b) return;
+    var k = b.dataset.tag;
+    state[k] = !state[k];
+    b.setAttribute("aria-pressed", String(state[k]));
+    apply();
+  });
+
+  // ---- map selection ----
+  var mdShop = document.getElementById("md-shop"),
+      mdName = document.getElementById("md-name"),
+      mdText = document.getElementById("md-text"),
+      mdBox  = document.getElementById("map-detail");
+
+  function select(id, scrollCard){
+    units.forEach(function(u){ u.classList.toggle("sel", u.getAttribute("data-id") === id); });
+    mdBox.classList.remove("empty");
+    if(id === "vacant"){
+      mdShop.textContent = "2B";
+      mdName.textContent = "Space available";
+      mdText.innerHTML = "Vacant tenancy, $23,900 plus GST plus OPEX. Leasing enquiries through Guideline Investors Limited, <a href=\"tel:+6475784807\">07 578 4807</a>.";
+    } else {
+      var t = T.filter(function(x){ return x.id === id; })[0];
+      if(!t) return;
+      var st = status(t, new Date());
+      mdShop.textContent = t.shop ? t.shop : "TBC";
+      mdName.textContent = t.name;
+      mdText.innerHTML = esc(t.catLabel) + ". " + esc(t.blurb) +
+        " <strong style=\"color:" + (st.open ? "#17724A" : "#6E7B7E") + "\">" +
+        (st.open ? "Open now" : "Closed") + ".</strong> " + esc(st.text) + ".";
+    }
+    if(scrollCard){
+      var card = grid.querySelector('.card[data-id="' + id + '"]');
+      if(card && !card.classList.contains("hidden")){
+        card.classList.add("flash");
+        setTimeout(function(){ card.classList.remove("flash"); }, 1600);
+      }
+    }
+  }
+
+  units.forEach(function(u){
+    u.addEventListener("click", function(){ select(u.getAttribute("data-id"), true); });
+    u.addEventListener("keydown", function(e){
+      if(e.key === "Enter" || e.key === " "){ e.preventDefault(); select(u.getAttribute("data-id"), true); }
+    });
+  });
+
+  grid.addEventListener("click", function(e){
+    var b = e.target.closest("[data-map]"); if(!b) return;
+    var id = b.getAttribute("data-map");
+    select(id, false);
+    document.getElementById("map").scrollIntoView({ behavior:"smooth", block:"start" });
+  });
+
+  apply();
+})();
+</script>
+</body>
+</html>
