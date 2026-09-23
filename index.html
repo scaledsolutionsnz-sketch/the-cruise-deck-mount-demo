@@ -365,8 +365,8 @@
       </span>
     </a>
     <nav class="main" aria-label="Main">
-      <a href="#directory">Directory</a>
       <a href="#map">Arcade map</a>
+      <a href="#directory">Directory</a>
       <a href="#getting-here">Getting here</a>
       <a href="#leasing" class="cta">Space available</a>
     </nav>
@@ -397,40 +397,9 @@
       </ul>
     </div>
     <figure class="hero-figure" style="margin:0">
-      <img src="images/mount-4.jpg" alt="Mount Maunganui coastline" loading="eager">
-      <p class="photo-note">Mount Maunganui. Photography of the arcade, the courtyard and each shopfront still to come.</p>
+      <img src="images/mount-2.jpg" alt="Maunganui Road and the beachfront, Mount Maunganui" loading="eager">
+      <p class="photo-note">Maunganui Road. Photography of the arcade, the courtyard and each shopfront still to come.</p>
     </figure>
-  </div>
-</section>
-
-<!-- ============ DIRECTORY ============ -->
-<section id="directory">
-  <div class="wrap">
-    <p class="eyebrow">The directory</p>
-    <h2>Who is here, and who is open right now.</h2>
-    <p class="lede">Thirteen tenancies plus one space available. Filter by what you actually came for.</p>
-
-    <div class="toolbar" role="group" aria-label="Directory filters">
-      <div class="filters" id="cat-filters">
-        <button class="fbtn" data-cat="all" aria-pressed="true">All</button>
-        <button class="fbtn" data-cat="food" aria-pressed="false">Food &amp; drink</button>
-        <button class="fbtn" data-cat="shopping" aria-pressed="false">Shopping</button>
-        <button class="fbtn" data-cat="services" aria-pressed="false">Services</button>
-        <button class="fbtn" data-cat="beauty" aria-pressed="false">Beauty</button>
-      </div>
-      <div class="toggles" id="tag-filters">
-        <button class="fbtn tog" data-tag="open" aria-pressed="false">Open now</button>
-        <button class="fbtn tog" data-tag="gf" aria-pressed="false">Gluten free</button>
-        <button class="fbtn tog" data-tag="dog" aria-pressed="false">Dog friendly</button>
-      </div>
-    </div>
-    <p class="result-line" id="result-line" aria-live="polite"></p>
-
-    <div class="grid" id="grid"></div>
-
-    <div class="note demo">
-      <strong>Hours look after themselves.</strong> Every tile works out open or closed against the time on your device, so nobody arrives at a locked door. Each business confirms its own hours once and the arcade keeps the single set that Google and the other listings copy from. The hours shown in this demonstration are indicative.
-    </div>
   </div>
 </section>
 
@@ -666,6 +635,39 @@
 
 <hr class="rule">
 
+<!-- ============ DIRECTORY ============ -->
+<section id="directory">
+  <div class="wrap">
+    <p class="eyebrow">The directory</p>
+    <h2>Who is here, and who is open right now.</h2>
+    <p class="lede">Thirteen tenancies plus one space available. Filter by what you actually came for.</p>
+
+    <div class="toolbar" role="group" aria-label="Directory filters">
+      <div class="filters" id="cat-filters">
+        <button class="fbtn" data-cat="all" aria-pressed="true">All</button>
+        <button class="fbtn" data-cat="food" aria-pressed="false">Food &amp; drink</button>
+        <button class="fbtn" data-cat="shopping" aria-pressed="false">Shopping</button>
+        <button class="fbtn" data-cat="services" aria-pressed="false">Services</button>
+        <button class="fbtn" data-cat="beauty" aria-pressed="false">Beauty</button>
+      </div>
+      <div class="toggles" id="tag-filters">
+        <button class="fbtn tog" data-tag="open" aria-pressed="false">Open now</button>
+        <button class="fbtn tog" data-tag="gf" aria-pressed="false">Gluten free</button>
+        <button class="fbtn tog" data-tag="dog" aria-pressed="false">Dog friendly</button>
+      </div>
+    </div>
+    <p class="result-line" id="result-line" aria-live="polite"></p>
+
+    <div class="grid" id="grid"></div>
+
+    <div class="note demo">
+      <strong>Hours look after themselves.</strong> Every tile works out open or closed against the time on your device, so nobody arrives at a locked door. Each business confirms its own hours once and the arcade keeps the single set that Google and the other listings copy from. The hours shown in this demonstration are indicative.
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
 <!-- ============ GETTING HERE ============ -->
 <section id="getting-here">
   <div class="wrap split">
@@ -750,43 +752,43 @@
   // Placeholder trading hours for the concept. "H:MM-H:MM" in 24h, index 0 = Sunday.
   var T = [
     { id:"blur", shop:"1a", name:"Blur Eyecare Mt Maunganui", cat:"services", catLabel:"Services",
-      blurb:"Independent optometry and eyewear, open here since August 2015, owned by optometrists Stuart Laing and Haidee Mannix. Their own words: the interior of our Mount store is an indoor forest all wrapped up in a shop. Welded tree sculptures, rimu boxes on glass shelving, and a weathered steel consulting room. Forty five minute eye exams with retinal photography and an OCT scan.",
+      blurb:"Independent optometry and eyewear, owned by Stuart Laing and Haidee Mannix since 2015.",
       hours:[null,"9:00-17:00","9:00-17:00","9:00-17:00","9:00-17:00","9:00-17:00","10:00-16:00"] },
     { id:"longboards", shop:"1A", name:"Mount Longboards", cat:"shopping", catLabel:"Shopping", check:true,
-      blurb:"Independent New Zealand surf brand. They shape and sell their own longboards, roughly $2,200 to $2,400, plus fins and a custom board service, alongside apparel, swimwear and outerwear. Their line: longboards, coastal living, good times. The largest social following in the arcade at 5,549.",
+      blurb:"Independent NZ surf brand — shapes and sells their own longboards, apparel and swimwear.",
       hours:["10:00-15:00","10:00-16:00","10:00-16:00","10:00-16:00","10:00-16:00","10:00-16:00","10:00-16:00"] },
     { id:"amplify", shop:"2A", name:"Amplify Her", cat:"beauty", catLabel:"Beauty",
-      blurb:"Brow and beauty studio, previously trading as Authentic Beauty. Around sixty services across brows, lashes, lash lifts, waxing, spray tans, nails and cosmetic tattoo. Rated 5.0 from 958 reviews on Fresha, and still climbing.",
+      blurb:"Brow and beauty studio — brows, lashes, waxing, spray tans and cosmetic tattoo.",
       hours:[null,"11:00-19:00","10:00-17:00","11:00-19:00","10:00-16:00","10:00-16:30","10:00-14:00"] },
     { id:"captainbones", shop:"3", name:"Captain Bones", cat:"food", catLabel:"Food & drink", check:true,
-      blurb:"Opened around September 2025 as an extension of Tay Street Store, taking the Shop 3 tenancy. Hours and full menu to come.",
+      blurb:"Opened 2025 as an extension of Tay Street Store. Full menu to come.",
       hours:[null,null,null,null,null,null,null] },
     { id:"agave", shop:"4", name:"Agave Bistro & Drinkery", cat:"food", catLabel:"Food & drink",
-      blurb:"Mexican bistro and cocktail bar with a long tequila and mezcal list. Ceviche de Acapulco, Carne Asada for two, market fish, and tortillas rolled to order. Taco Tuesday, jam nights on Thursday, DJs on Saturday. Vegan options across most dishes.",
+      blurb:"Mexican bistro and cocktail bar with a long tequila and mezcal list, live music on weekends.",
       hours:[null,null,"12:00-22:00","12:00-22:00","12:00-23:30","12:00-23:30","12:00-23:30"] },
     { id:"electric", shop:"5b", name:"Electric Soul Tattoo & Gallery", cat:"services", catLabel:"Services",
-      blurb:"Tattoo studio and gallery with two resident artists, Kirky Maree Donnelly and Lou Hill. Black and grey, traditional, Japanese and non traditional work. Walk ins welcome. Artwork is shown on the day of the appointment rather than in advance, and bookings take a deposit.",
+      blurb:"Tattoo studio and gallery with two resident artists. Walk-ins welcome.",
       hours:[null,"10:00-16:00","10:00-16:00","10:00-16:00","10:00-16:00","10:00-16:00","10:00-15:00"] },
     { id:"onyx", shop:"6a", name:"Onyx Laundromat", cat:"services", catLabel:"Services",
-      blurb:"Drop off and commercial laundry. Contracts for hotels, Airbnb, restaurants, healthcare, salons and workwear, with collection and delivery. Self service is at their Rotorua site, not here. Their own opening line: now you can tell those cruise passengers we have a laundry right here on The Cruise Deck.",
+      blurb:"Drop-off and commercial laundry, with collection and delivery for hotels and Airbnbs.",
       hours:["9:00-14:00","9:00-14:00","9:00-14:00","9:00-14:00","9:00-14:00","9:00-14:00","9:00-14:00"] },
     { id:"barn", shop:"7 and 8", name:"THE BARN Burger & Grill", cat:"food", catLabel:"Food & drink", dog:true, check:true,
-      blurb:"Burgers and grill across two tenancies. Gourmet beef, chicken and vegetarian burgers, scotch fillet and BBQ ribs, with gluten free buns and a naked option. Pet friendly, live music, and Sky Sport on the big screens. 4.5 from 595 Google reviews.",
+      blurb:"Burgers and grill across two tenancies, pet friendly with live sport on the big screens.",
       hours:["11:00-21:00","11:00-18:00","11:00-21:00","11:00-21:00","11:00-21:00","11:00-21:00","11:00-21:00"] },
     { id:"myrrh", shop:"9", name:"Myrrh & Co Florist", cat:"shopping", catLabel:"Shopping",
-      blurb:"Florist and giftware, owner operated by Carolyn Kane. Fresh market flowers, funeral and corporate work, weddings by consultation, and weekly or monthly subscriptions. Delivery across Mount Maunganui, Papamoa and Tauranga.",
+      blurb:"Florist and giftware, owner-operated by Carolyn Kane. Weddings and subscriptions available.",
       hours:["10:00-15:00","9:30-16:30","9:30-16:30","9:30-16:30","9:30-16:30","9:30-16:30","9:30-16:00"] },
     { id:"sabal", shop:"10", name:"Sabal", cat:"food", catLabel:"Food & drink", gf:true, dog:true,
-      blurb:"Salad and poke bowls, one hundred percent gluten free including a dedicated fryer. Six bowls at $25, plus karaage and Korean fried chicken. Licensed, with a covered deck, beanbags and hammock chairs. 4.9 from 101 Google reviews.",
+      blurb:"100% gluten free salad and poke bowls, licensed, with a covered deck.",
       hours:["11:00-15:00","11:00-16:00","11:00-16:00","11:00-16:00","11:00-16:00","11:00-16:00","11:00-15:00"] },
     { id:"hot", shop:"11", name:"House of Travel Mount Maunganui", cat:"services", catLabel:"Services",
-      blurb:"Full service travel agency, locally owned and operated by Tanya Aitken. The team are CLIA accredited cruise specialists, which is a useful thing to have in an arcade called The Cruise Deck. Flights, tailored holidays and Travelex foreign exchange. 4.9 from 161 Google reviews.",
+      blurb:"Full-service travel agency and CLIA-accredited cruise specialists.",
       hours:[null,"9:00-17:00","9:00-17:00","9:00-17:00","9:00-17:00","9:00-17:00","9:00-13:00"] },
     { id:"arte", shop:null, name:"Arte Haus Gallery", cat:"shopping", catLabel:"Shopping",
-      blurb:"Contemporary gallery selling work by more than thirty New Zealand artists. Paintings, photography, ceramics, cast and blown glass, copper and wall sculpture, roughly $350 to $3,800. Their line: art for the heart and soul. Hours shown are their winter set.",
+      blurb:"Contemporary gallery selling work by more than thirty NZ artists.",
       hours:[null,"10:00-16:00","10:00-16:00","10:00-16:00","10:00-16:00","10:00-16:00","9:00-15:00"] },
     { id:"enjay", shop:null, name:"En Jay Hair", cat:"beauty", catLabel:"Beauty",
-      blurb:"Hair salon, owner Nicky Robertson. A Redken Fifth Avenue salon using Redken colour, with senior stylists carrying seven years or more. Cutting, colour, balayage, bridal and occasion styling, plus a quick service Hair Xpress line.",
+      blurb:"Hair salon by Nicky Robertson — cutting, colour, balayage and bridal styling.",
       hours:[null,null,"9:00-17:30","9:00-17:30","9:00-20:00","9:00-16:45","9:00-16:00"] }
   ];
 
